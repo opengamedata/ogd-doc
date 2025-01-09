@@ -7,8 +7,8 @@ For any given storage medium, then, there may be a `Connector`, `Interface`, and
 ```{mermaid}
 classDiagram
 StorageConnector <|-- MySQLConnector
-MySQLConnector <|-- MySQLInterface
 Interface <|-- MySQLInterface
+MySQLConnector <|-- MySQLInterface
 MySQLConnector <|-- MySQLOuterface
 Outerface <|-- MySQLOuterface
 ```

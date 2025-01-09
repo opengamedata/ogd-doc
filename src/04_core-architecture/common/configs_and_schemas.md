@@ -26,7 +26,7 @@ The two clearest, most practical examples of this distinction relate to data con
     However, each data store might in turn contain multiple resources, such as files or database tables:
 
     ```{mermaid}
-    flowchart TD title "Multiple Tables per Data Store"
+    flowchart TD
 
     StorageConnector --> remote[(Remote Fileserver)]
     remote[(Remote Fileserver)] -.-> file1.tsv

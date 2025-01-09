@@ -1,4 +1,4 @@
-Architecture Chapter 2: Interfaces & Outerfaces
+Architecture Chapter 3: Interfaces & Outerfaces
 ===============================================
 
 OpenGameData uses classes called ``connectors`` to load input data and write output data.

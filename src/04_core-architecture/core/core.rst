@@ -1,4 +1,4 @@
-Architecture Chapter 4: OpenGameData "Core" Package
+Architecture Chapter 4: OpenGameData ``Core`` Package
 ===================================================
 
 The primary package for working with data from the OpenGameData project, particularly for feature extraction, is ``opengamedata-core`` (or ``ogd-core`` for short).

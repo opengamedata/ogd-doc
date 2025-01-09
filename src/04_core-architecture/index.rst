@@ -10,5 +10,4 @@ Unit 4: OpenGameData Core Architecture
    interfaces/interfaces.rst
    core/core.rst
    Adding_a_Database.md
-   Code_Organization.md
    Database_Schemas.md

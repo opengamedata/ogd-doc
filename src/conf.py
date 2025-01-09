@@ -53,6 +53,7 @@ extensions = [
     "sphinx.ext.graphviz",
     "sphinx.ext.linkcode",
     "sphinx.ext.todo",
+    "sphinxcontrib.mermaid",
     "sphinx_rtd_theme",
     "myst_parser"
 ]

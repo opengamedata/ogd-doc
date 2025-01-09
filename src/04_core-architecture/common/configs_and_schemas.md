@@ -28,6 +28,7 @@ The two clearest, most practical examples of this distinction relate to data con
     ```{mermaid}
     flowchart TD
 
+    StorageConnector --> local[(Local File)]
     StorageConnector --> remote[(Remote Fileserver)]
     remote[(Remote Fileserver)] -.-> file1.tsv
     remote[(Remote Fileserver)] -.-> file2.tsv

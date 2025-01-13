@@ -11,13 +11,13 @@ Because these are such fundamental and important pieces of the architecture, and
 .. include:: ./storage_connectors.md
    :parser: myst_parser.sphinx_
 
-.. include:: ./interfaces.md
+.. include:: ./interface_classes.md
    :parser: myst_parser.sphinx_
 
 .. include:: ./writing_an_interface.md
    :parser: myst_parser.sphinx_
 
-.. include:: ./outerfaces.md
+.. include:: ./outerface_classes.md
    :parser: myst_parser.sphinx_
 
 .. include:: ./writing_an_outerface.md

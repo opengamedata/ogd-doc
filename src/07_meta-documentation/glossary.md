@@ -1,4 +1,4 @@
-# Chapter 5: Glossary
+# Unit 7, Chapter 7: Glossary
 
 This page contains some important terminology for OpenGameData.
 Refer here if you are uncertain what a particular term means.

@@ -1,4 +1,4 @@
-# Fun Historical Bits
+# Unit 7, Chapter 6 : Fun Historical Bits
 
 This document just holds bits of historic trivia and code snippets that I find fun in looking back on the development of OpenGameData.
 

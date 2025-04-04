@@ -1,4 +1,4 @@
-Chapter 1: Self-Documentation
+Unit 7, Chapter 1: Self-Documentation
 ================================================
 
 Inevitably, for any sufficiently large project, a few words of that project's documentation must be spent describing how the project is documented.

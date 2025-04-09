@@ -137,3 +137,8 @@ In fact, these correspond the exact structural data available from a `TableStruc
 * `ColumnNames` : A list of all the `Name` values from the `ColumnSchema`s given by the `Columns` property. Note this is _not_ a list of the `ReadableName` values.
 * `ColumnMap` : A mapping from element names to `ColumnMapIndex` values.
     `ColumnMapIndex` is simply an alias for a value that could be an `int`, a `List[int]`, a `Dict[str, int]`, or `None`.
+* Other Properties : The class also has a series of properties for accessing individual parts of the column mapping.
+    For each **element** common to event and feature data structures, there is a pair of properties.
+    These are the "index" and "column" props, named like `<ElementName>Index` and `<ElementName>Column`.
+    The "index" property gets the `ColumnMapIndex` for the element, indicating which column(s) of the table is/are mapped to the element.
+    The "column" property gets the _name_ of the column mapped to the element, or string with comma-separated names of the column.

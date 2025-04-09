@@ -142,3 +142,13 @@ In fact, these correspond the exact structural data available from a `TableStruc
     These are the "index" and "column" props, named like `<ElementName>Index` and `<ElementName>Column`.
     The "index" property gets the `ColumnMapIndex` for the element, indicating which column(s) of the table is/are mapped to the element.
     The "column" property gets the _name_ of the column mapped to the element, or string with comma-separated names of the column.
+* `_fromDict` Abstract Function : Finally, `TableStructureSchema` implements a `FromDict` function, allowing it to handle construction of the data it holds.
+    In turn, it defers to its subclasses to implement a new abstract function called `_fromDict`, which is meant to handle parsing for the specific data added by subclasses.
+
+##### `EventTableStructureSchema` and `FeatureTableStructureSchema`
+
+These subclasses of `TableStructureSchema` add more properties for the specific elements of their data structures.
+
+In addition, they implement the abstract functions for `AsMarkdown` and `Default`, which `TableStructureSchema` does not.
+Further, they implement the `_fromDict` abstract function introduced by `TableStructureSchema`.
+Finally, they implement `RowToEvent` and `RowToFeatureData`, respectively, for converting raw data from a data table into the specific data structures.

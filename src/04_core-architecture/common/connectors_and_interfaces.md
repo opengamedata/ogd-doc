@@ -5,6 +5,9 @@ Further, `Interface` and `Outerface` classes are used for data input and output,
 For any given storage medium, then, there may be a `Connector`, `Interface`, and `Outerface` class:
 
 ```{mermaid}
+---
+title: Storage Connector Hierarchy
+---
 classDiagram
 StorageConnector <|-- MySQLConnector
 Interface <|-- MySQLInterface

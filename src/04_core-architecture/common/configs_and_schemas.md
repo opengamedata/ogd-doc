@@ -10,12 +10,17 @@ The distinction between these groups is as follows:
 * `Schema` classes are used for any other case where data related to external data or tools are needed.
     This may include things like descriptions of events logged by a particular game, or the mapping of columns from an external data source to the internal structure used by OpenGameData.
 
+### Examples Uses of `Config` and `Schema`
+
 The two clearest, most practical examples of this distinction relate to data connections, and feature extraction:
 
 1. **Data Connections** : `ogd-common` uses `StorageConnector` subclasses, discussed in the chapter on "Interfaces," to connect to data stores either to import or export data.
     Data stores may include a local file, an external file host, or a database:
 
     ```{mermaid}
+    ---
+    title: Basic Data Stores
+    ---
     flowchart TD
 
     StorageConnector --> local[(Local File)]
@@ -26,6 +31,9 @@ The two clearest, most practical examples of this distinction relate to data con
     However, each data store might in turn contain multiple resources, such as files or database tables:
 
     ```{mermaid}
+    ---
+    title: Detailed Data Stores
+    ---
     flowchart TD
 
     StorageConnector --> local[(Local File)]
@@ -47,7 +55,82 @@ The two clearest, most practical examples of this distinction relate to data con
     Both the game-defined events and executed extractor modules are included in the `README.md` files included with each data export.
     Classes of the `Schema` variety are used for managing the specifications of game events, and `Config` classes are used to manage the specification of extractor modules.
 
-### Schema Classes in OGD-Common Library
+### Overview of `Config` and `Schema` Classes in OGD-Common Library
+
+This section will give an overview of the categories and class hierarchies of each config and schema class in the `opengamedata-common` Python library, which we will also refer to informally as OGD-Common or Common, for short.
+
+#### `Config` Categories
+
+#### `games` Configs
+
+```{mermaid}
+---
+title: `games` Configs
+---
+classDiagram
+    note "Showing subsets of public properties"
+    class Config
+    class GameGeneratorsConfig {
+        + GameID
+        + Detectors : DetectorMapConfig
+        + Extractors : ExtractorMapConfig
+        + LevelRange
+        + OtherRanges : Dict[str, range]
+    }
+    class FeatureMapConfig {
+        + AggregateFeatures
+        + PerCountFeatures
+        + LegacyPerLevelFeatures
+        + LegacyMode : bool
+    }
+    class DetectorMapConfig {
+        + AggregateDetectors
+        + PerCountDetectors
+        + PerLevelDetectors
+    }
+    class GeneratorConfig
+    class FeatureConfig
+    class DetectorConfig
+    class SubfeatureConfig {
+        + ReturnType
+        + Description
+    }
+    class DetectorConfig {
+        + Enabled
+        + Description
+        + ReturnType
+        + Subfeatures
+    }
+    class AggregateConfig {
+        + Enabled
+        + Description
+        + ReturnType
+        + Subfeatures
+    }
+    class PerCountConfig {
+        + Enabled
+        + Description
+        + Prefix
+        + Count
+        + ReturnType
+        + Subfeatures
+    }
+    GameGeneratorsConfig *-- DetectorMapConfig
+    GameGeneratorsConfig *-- FeatureMapConfig
+    DetectorMapConfig o-- DetectorConfig
+    FeatureMapConfig o-- AggregateConfig
+    FeatureMapConfig o-- PerCountConfig
+    GeneratorConfig <|-- DetectorConfig
+    GeneratorConfig <|-- FeatureConfig
+    FeatureConfig <|-- AggregateConfig
+    FeatureConfig <|-- PerCountConfig
+    AggregateConfig *-- SubfeatureConfig
+    PerCountConfig *-- SubfeatureConfig
+```
+
+### `Config` Classes in OGD-Common Library
+
+### `Schema` Classes in OGD-Common Library
 
 This section will give an overview of the structures of each schema class in the `opengamedata-common` Python library, which we will also refer to informally as OGD-Common or Common, for short.
 

@@ -1,4 +1,6 @@
-## `schemas` and `configs` Modules
+## Overview of `Config` and `Schema` Classes in OGD-Common Library
+
+This section will give an overview of the categories and class hierarchies of each config and schema class in the `opengamedata-common` Python library, which we will also refer to informally as OGD-Common or Common, for short.
 
 In order to manage configuration data, as well as descriptions of the configuration or structure of external data and data sources, OpenGameData uses a broad collection of classes called `Schema`s.
 Within this broad collection is a subcategory of classes called `Config`s.
@@ -34,7 +36,3 @@ The two clearest, most practical examples of this distinction relate to data con
 2. **Feature Extraction** : The writing and execution of feature extractor modules requires both a knowledge of the event types logged by a game, and a way to specify which extractor modules to execute.
     Both the game-defined events and executed extractor modules are included in the `README.md` files included with each data export.
     Classes of the `Schema` variety are used for managing the specifications of game events, and `Config` classes are used to manage the specification of extractor modules.
-
-### Overview of `Config` and `Schema` Classes in OGD-Common Library
-
-This section will give an overview of the categories and class hierarchies of each config and schema class in the `opengamedata-common` Python library, which we will also refer to informally as OGD-Common or Common, for short.

@@ -1,6 +1,6 @@
-#### `Config` Categories
+## `Config` Categories and Classes
 
-#### `games` Configs
+### `games` Configs
 
 ```{mermaid}
 ---

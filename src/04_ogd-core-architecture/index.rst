@@ -1,4 +1,4 @@
-Unit 4: OpenGameData Core Architecture
+Unit 4: `opengamedata-core` Architecture
 ========================================
 
 .. toctree::
@@ -6,8 +6,4 @@ Unit 4: OpenGameData Core Architecture
    :caption: OGD Architecture
 
    overview/overview.rst
-   common/common.rst
-   interfaces/interfaces.rst
    core/core.rst
-   Adding_a_Database.md
-   Database_Schemas.md

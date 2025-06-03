@@ -1,5 +1,5 @@
-`opengamedata-common` Chapter 2: Models
-=======================================
+`opengamedata-common` Chapter 4: Utilities
+==========================================
 
 .. include:: ./utils.md
    :parser: myst_parser.sphinx_

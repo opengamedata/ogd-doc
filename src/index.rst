@@ -14,10 +14,11 @@ OpenGameData documentation
    01_core-basics/index.rst
    02_events/index.rst
    03_detectors-and-features/index.rst
-   04_core-architecture/index.rst
-   05_apis/index.rst
-   06_analysis-and-visualization/index.rst
-   07_meta-documentation/index.rst
+   04_ogd-core-architecture/index.rst
+   05_ogd-common/index.rst
+   06_apis/index.rst
+   07_analysis-and-visualization/index.rst
+   08_meta-documentation/index.rst
 
    reference/index.rst
 

@@ -1,4 +1,4 @@
-## `Schema`s and `Config`s
+## `schemas` and `configs` Modules
 
 In order to manage configuration data, as well as descriptions of the configuration or structure of external data and data sources, OpenGameData uses a broad collection of classes called `Schema`s.
 Within this broad collection is a subcategory of classes called `Config`s.

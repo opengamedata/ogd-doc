@@ -1,4 +1,4 @@
-## `Connector`s, `Interface`s, and `Outerface`s
+## `connectors` Module
 
 ### Overview
 
@@ -36,7 +36,7 @@ Database[(Database)] -.-> database2
 database2 -.-> table3
 ```
 
-### `StorageConnector` and subclasses
+### `StorageConnector`s, `Interface`s, and `Outerface`s
 
 OpenGameData uses classes called `StorageConnector`s to establish connections to data stores.
 Further, `Interface` and `Outerface` classes are used for data input and output, where an `Interface` class has specific functions for retrieving data from a store, and an `Outerface` has functions for writing data to a store.

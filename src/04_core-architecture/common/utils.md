@@ -1,4 +1,4 @@
-## Utils
+## `utils` Module
 
 The ``utils`` module contains various classes and submodules that do not fit cleanly into a specific category, but are useful across tools and other modules.
 

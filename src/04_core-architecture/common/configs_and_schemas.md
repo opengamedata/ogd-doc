@@ -1,4 +1,4 @@
-## `Config`s and `Schema`s
+## `Schema`s and `Config`s
 
 In order to manage configuration data, as well as descriptions of the configuration or structure of external data and data sources, OpenGameData uses a broad collection of classes called `Schema`s.
 Within this broad collection is a subcategory of classes called `Config`s.
@@ -28,27 +28,7 @@ The two clearest, most practical examples of this distinction relate to data con
     StorageConnector --> Database[(Database)]
     ```
 
-    However, each data store might in turn contain multiple resources, such as files or database tables:
-
-    ```{mermaid}
-    ---
-    title: Detailed Data Stores
-    ---
-    flowchart TD
-
-    StorageConnector --> local[(Local File)]
-    StorageConnector --> remote[(Remote Fileserver)]
-    remote[(Remote Fileserver)] -.-> file1.tsv
-    remote[(Remote Fileserver)] -.-> file2.tsv
-    remote[(Remote Fileserver)] -.-> file3.tsv
-    StorageConnector --> Database[(Database)]
-    Database[(Database)] -.-> database1
-    database1 -.-> table1
-    database1 -.-> table2
-    Database[(Database)] -.-> database2
-    database2 -.-> table3
-    ```
-
+    However, each data store might in turn contain multiple resources, such as files or database tables.
     To handle this, there are several classes of the `Config` variety that handle the configuration of a `StorageConnector`, such as the location and credentials to access a given data storage resource.
     On the other hand, the location and table structure of individual resources _within_ a data store are properties of that external store, thus they are handled with classes of the `Schema` variety.
 2. **Feature Extraction** : The writing and execution of feature extractor modules requires both a knowledge of the event types logged by a game, and a way to specify which extractor modules to execute.

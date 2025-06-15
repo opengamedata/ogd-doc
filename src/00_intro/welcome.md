@@ -31,8 +31,8 @@ The units are as follows:
     A comprehensive review of the data processing architecture in OpenGameData Core, including how to integrate Core components into your own 3rd-party tool(s).
 5. [OGD ``Common'' Library](../05_ogd-common/index.rst):  
     A comprehensive review of the library containing base classes and other utilities used across multiple parts of the OGD software ecosystem.
-6. [OpenGameData APIs](../06_apis/index.rst):  
-    Documentation of the OpenGameData APIs for data storage and access.
+6. [OpenGameData Web APIs](../06_apis/index.rst):  
+    Documentation of the OpenGameData Web APIs for data storage and access.
 7. [Data Analysis & Visualization Tools](../07_analysis-and-visualization/index.rst):  
     An introduction to OpenGameData-based tools for data analysis, including Jupyter Notebook templates and data dashboards.
 8. [Meta-Documentation](../08_meta-documentation/index.rst):  

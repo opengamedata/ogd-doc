@@ -13,7 +13,7 @@ If you encounter any issues with this documentation site, such as missing images
 
 ## Documentation Organization
 
-The OpenGameData documentation is broken down into 8 *Units*, plus the "Unit 0" containing this introductory material.
+The OpenGameData documentation is broken down into 9 *Units*, plus the "Unit 0" containing this introductory material.
 Each unit is made up of several chapters.
 Together, the units describe all parts of the OpenGameData infrastructure.
 
@@ -29,13 +29,15 @@ The units are as follows:
     How to write data Generators in OpenGameData Core to create refined analytics from raw event data.
 4. [Core Architecture](../04_core-architecture/index.rst):  
     A comprehensive review of the data processing architecture in OpenGameData Core, including how to integrate Core components into your own 3rd-party tool(s).
-5. [OpenGameData APIs](../05_apis/index.rst):  
+5. [OGD ``Common'' Library](../05_ogd-common/index.rst):  
+    A comprehensive review of the library containing base classes and other utilities used across multiple parts of the OGD software ecosystem.
+6. [OpenGameData APIs](../06_apis/index.rst):  
     Documentation of the OpenGameData APIs for data storage and access.
-6. [Data Analysis & Visualization Tools](../06_analysis-and-visualization/index.rst):  
+7. [Data Analysis & Visualization Tools](../07_analysis-and-visualization/index.rst):  
     An introduction to OpenGameData-based tools for data analysis, including Jupyter Notebook templates and data dashboards.
-7. [Meta-Documentation](../07_meta-documentation/index.rst):  
+8. [Meta-Documentation](../08_meta-documentation/index.rst):  
     Documentation for contributors working on core OGD infrastructure and documentation, covering topics such as coding conventions and our software reference platform.
-8. [Core API Reference](../reference/index.rst):  
+9. [Core API Reference](../reference/index.rst):  
     API reference for the OpenGameData Core Python package.
 
 ## OpenGameData Pipeline

@@ -1,6 +1,60 @@
 ## Introduction to Data Storage and Interfaces
 
-(adapted from [Proposal #61](https://github.com/opengamedata/ogd-common/discussions/61) on GitHub)
+### `StorageConnector`s, `Interface`s, and `Outerface`s
+
+OpenGameData uses classes called `StorageConnector`s to establish connections to data stores.
+
+Data stores may include a local file, an external file host, or a database:
+
+```{mermaid}
+---
+title: Basic Data Stores
+---
+flowchart TD
+
+StorageConnector --> local[(Local File)]
+StorageConnector --> remote[(Remote Fileserver)]
+StorageConnector --> Database[(Database)]
+```
+
+However, each data store might in turn contain multiple resources, such as files or database tables:
+
+```{mermaid}
+---
+title: Detailed Data Stores
+---
+flowchart TD
+
+StorageConnector --> local[(Local File)]
+StorageConnector --> remote[(Remote Fileserver)]
+remote[(Remote Fileserver)] -.-> file1.tsv
+remote[(Remote Fileserver)] -.-> file2.tsv
+remote[(Remote Fileserver)] -.-> file3.tsv
+StorageConnector --> Database[(Database)]
+Database[(Database)] -.-> database1
+database1 -.-> table1
+database1 -.-> table2
+Database[(Database)] -.-> database2
+database2 -.-> table3
+```
+
+Further, `Interface` and `Outerface` classes are used for data input and output, where an `Interface` class has specific functions for retrieving data from a store, and an `Outerface` has functions for writing data to a store.
+For any given storage medium, then, there may be a `Connector`, `Interface`, and `Outerface` class:
+
+```{mermaid}
+---
+title: Storage Connector Hierarchy
+---
+classDiagram
+StorageConnector <|-- MySQLConnector
+Interface <|-- MySQLInterface
+MySQLConnector <|-- MySQLInterface
+MySQLConnector <|-- MySQLOuterface
+Outerface <|-- MySQLOuterface
+```
+
+File input and output via `Interface` and `Outerface` classes is significant enough to deserve a chapter of its own.
+Thus, please refer to Unit 4, Chapter 3: Interfaces and Outerfaces for details.
 
 In the new hierarchy, we separate connection logic from data read, creating a common base class called `StorageConnector` to handle connection logic. Then `Interface` and `Outerface` classes are set up independently as mixin classes that define a set of functions for reading or writing data.
 Then for any data storage medium we want to support, we write a subclass of `StorageConnector` as e.g. `MySQLConnector` to take in the corresponding config and call appropriate functions from whatever (in this case) MySQL library is in use.
@@ -110,3 +164,5 @@ GameDataConfig *-- "1..2" TableSchema
 MySQLInterface *-- "1" GameDataConfig 
 FileOuterface *-- "1" GameDataConfig 
 ```
+
+(for additional details, see [Proposal #61](https://github.com/opengamedata/ogd-common/discussions/61) on GitHub)

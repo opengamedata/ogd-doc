@@ -54,7 +54,7 @@ Outerface <|-- MySQLOuterface
 ```
 
 File input and output via `Interface` and `Outerface` classes is significant enough to deserve a chapter of its own.
-Thus, please refer to Unit 4, Chapter 3: Interfaces and Outerfaces for details.
+Thus, please refer to Unit 5, Chapter 3: Interfaces and Outerfaces for details.
 
 In the new hierarchy, we separate connection logic from data read, creating a common base class called `StorageConnector` to handle connection logic. Then `Interface` and `Outerface` classes are set up independently as mixin classes that define a set of functions for reading or writing data.
 Then for any data storage medium we want to support, we write a subclass of `StorageConnector` as e.g. `MySQLConnector` to take in the corresponding config and call appropriate functions from whatever (in this case) MySQL library is in use.

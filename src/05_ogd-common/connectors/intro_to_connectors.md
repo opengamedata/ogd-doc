@@ -38,8 +38,8 @@ Database[(Database)] -.-> database2
 database2 -.-> table3
 ```
 
-Further, `Interface` and `Outerface` classes are used for data input and output, where an `Interface` class has specific functions for retrieving data from a store, and an `Outerface` has functions for writing data to a store.
-For any given storage medium, then, there may be a `Connector`, `Interface`, and `Outerface` class:
+We use `Interface` and `Outerface` classes are used for data input and output, where an `Interface` class has specific functions for retrieving data from a store, and an `Outerface` has functions for writing data to a store.
+For any given storage medium, then, there may be a `Connector`, `Interface`, and `Outerface` class. In the example below, we show how the `MySQLConnector`, `MySQLInterface`, and `MySQLOuterface` are related:
 
 ```{mermaid}
 ---
@@ -53,26 +53,23 @@ MySQLConnector <|-- MySQLOuterface
 Outerface <|-- MySQLOuterface
 ```
 
-File input and output via `Interface` and `Outerface` classes is significant enough to deserve a chapter of its own.
-Thus, please refer to Unit 5, Chapter 3: Interfaces and Outerfaces for details.
-
-In the new hierarchy, we separate connection logic from data read, creating a common base class called `StorageConnector` to handle connection logic. Then `Interface` and `Outerface` classes are set up independently as mixin classes that define a set of functions for reading or writing data.
-Then for any data storage medium we want to support, we write a subclass of `StorageConnector` as e.g. `MySQLConnector` to take in the corresponding config and call appropriate functions from whatever (in this case) MySQL library is in use.
+In this hierarchy, we separate connection logic from data I/O, with a common base class called `StorageConnector` to handle connection logic. `Interface` and `Outerface` base classes exist independently as mixin classes that define a set of functions for reading or writing data.
+Then for any data storage medium we want to support, we write a subclass of `StorageConnector`, e.g. `MySQLConnector`, to take in the corresponding config and call appropriate functions from whatever MySQL library is in use.
 To create an actual `Interface` or `Outerface` for MySQL, we would create `MySQLInterface` or `MySQLOuterface` that inherits from `MySQLConnector` and `Interface`/`Outerface`.
 
-```mermaid
-classDiagram
+<!-- ```mermaid -->
+<!-- classDiagram
 StorageConnector <|-- MySQLConnector
 MySQLConnector <|-- MySQLInterface
 Interface <|-- MySQLInterface
 StorageConnector <|-- FileConnector
 FileConnector <|-- FileOuterface
-Outerface <|-- FileOuterface
-```
+Outerface <|-- FileOuterface -->
+<!-- ``` -->
 
 ### Storage Config Schemas
 
-With the new hierarchy separating connection from data read/write, we can also improve how configs are set up.
+With the hierarchy separating connection from data read/write, we can also improve how configs are set up.
 
 So, with the new class hierarchy, we should also have a more formal splitting up of configs and schemas, and then let core adjust to what makes sense for common.
 

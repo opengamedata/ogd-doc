@@ -1,4 +1,4 @@
-`opengamedata-common` Chapter 2: Models
+Chapter 2: Models
 =====================================================================
 
 .. include:: ./models.md

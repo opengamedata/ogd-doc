@@ -1,4 +1,4 @@
-`opengamedata-common` Chapter 4: Utilities
+Chapter 4: Utilities
 =====================================================================
 
 .. include:: ./utils.md

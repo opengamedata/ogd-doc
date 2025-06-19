@@ -1,5 +1,5 @@
-`opengamedata-common` Chapter 3: Schemas and Configs
-====================================================
+Chapter 3: Schemas and Configs
+=====================================================================
 
 .. include:: ./overview.md
    :parser: myst_parser.sphinx_

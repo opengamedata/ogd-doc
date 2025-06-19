@@ -1,4 +1,4 @@
-`opengamedata-common` Chapter 1: Connectors, Interfaces, & Outerfaces
+Chapter 1: Connectors, Interfaces, & Outerfaces
 =====================================================================
 
 OpenGameData uses classes called ``connectors`` to aid in loading input data and writing output data.

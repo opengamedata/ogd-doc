@@ -6,3 +6,6 @@ to ensure data compatibility across projects.
 
 .. include:: ./models.md
    :parser: myst_parser.sphinx_
+
+.. include:: ./models.md
+   :parser: myst_parser.sphinx_

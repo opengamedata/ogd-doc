@@ -6,7 +6,7 @@ OpenGameData uses classes called `StorageConnector`s to establish connections to
 
 Data stores may include a local file, an external file host, or a database:
 
-```{mermaid}
+```mermaid
 ---
 title: Basic Data Stores
 ---
@@ -19,7 +19,7 @@ StorageConnector --> Database[(Database)]
 
 However, each data store might in turn contain multiple resources, such as files or database tables:
 
-```{mermaid}
+```mermaid
 ---
 title: Detailed Data Stores
 ---
@@ -41,11 +41,12 @@ database2 -.-> table3
 We use `Interface` and `Outerface` classes are used for data input and output, where an `Interface` class has specific functions for retrieving data from a store, and an `Outerface` has functions for writing data to a store.
 For any given storage medium, then, there may be a `Connector`, `Interface`, and `Outerface` class. In the example below, we show how the `MySQLConnector`, `MySQLInterface`, and `MySQLOuterface` are related:
 
-```{mermaid}
+```mermaid
 ---
 title: Storage Connector Hierarchy
 ---
 classDiagram
+
 StorageConnector <|-- MySQLConnector
 Interface <|-- MySQLInterface
 MySQLConnector <|-- MySQLInterface
@@ -72,6 +73,9 @@ Outerface <|-- FileOuterface -->
 Putting together all the various classes described in the sections below, and hiding direct connections where certain configs/schemas are passed to an upper-level class through lower-level classes, the proposed refactor/redesign can be summarized as follows:
 
 ```mermaid
+---
+title: Full Hierarchy of Storage Classes
+---
 classDiagram
 
 StorageConnector <|-- MySQLConnector

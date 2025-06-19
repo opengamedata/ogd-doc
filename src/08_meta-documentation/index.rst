@@ -1,4 +1,4 @@
-Unit 7: OpenGameData Conventions & Meta-Documentation
+Unit 8: OpenGameData Conventions & Meta-Documentation
 ========================================================
 
 ..

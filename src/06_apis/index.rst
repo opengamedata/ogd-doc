@@ -1,4 +1,4 @@
-Unit 5: OpenGameData APIs
+Unit 6: OpenGameData APIs
 =========================
 
 .. toctree::

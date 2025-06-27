@@ -1,5 +1,5 @@
 reStructuredText Chapter Template
 =================================
 
-.. literalinclude:: ./_chapter.rst
+.. literalinclude:: ./_chapter_index.rst
 

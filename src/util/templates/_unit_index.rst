@@ -1,12 +1,15 @@
-Documentation Unit N: Unit Title
-=======================================
+Unit Title
+==========
 
 .. toctree::
    :maxdepth: 1
    :caption: Unit Caption
 
-..    first_chapter.md
+..    .. include:: unit_name.md
+      :parser: myst_parser.sphinx_
 
-..    second_chapter.rst
+..    01/index.rst
+
+..    02/index.rst
 
 ..    etc.etc

@@ -1,14 +1,14 @@
-Unit 5: `opengamedata-common` Package
-=====================================
+OpenGameData Common Modules
+===========================
 
 .. toctree::
    :maxdepth: 1
-   :caption: OpenGameData provides a package, called `opengamedata-common` (or `ogd-common` for short),
-      for utility classes that are useful across projects, such as data connectors and configuration management.
-      This chapter will describe the various modules available in `ogd-common`.
+   :caption: OpenGameData Common
 
-   connectors/connectors.rst
-   models/models.rst
-   .. schemas/schemas.rst
-   .. utils/utils.rst
-   .. Adding_a_Database.md
+.. include:: ogd_common.md
+      :parser: myst_parser.sphinx_
+
+   chapter_01/connectors.rst
+   chapter_02/models.rst
+   chapter_03/schemas.rst
+   chapter_04/utils.rst

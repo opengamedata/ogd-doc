@@ -1,5 +1,3 @@
-# Exporting with OpenGameData
-
 ## Running a Basic Export
 
 There are three options for running data exports with **`OpenGameData`**:

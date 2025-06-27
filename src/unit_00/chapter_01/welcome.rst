@@ -1,4 +1,4 @@
- Chapter 01: Welcome to OpenGameData
+Chapter 01: Welcome to OpenGameData
 ====================================
 
 Welcome to the OpenGameData Documentation Project.

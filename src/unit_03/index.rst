@@ -1,10 +1,13 @@
-Unit 3: Feature Engineering
-========================================
+Unit 3: Data Generators: Detectors & Extractors
+===============================================
 
 .. toctree::
    :maxdepth: 1
-   :caption: Feature Engineering
+   :caption: Detectors & Extractors
 
-   ./add_new_game.md
-   ./Adding_a_Feature.md
-   ./Adding_a_Realtime_Model.md
+.. include:: generators.md
+      :parser: myst_parser.sphinx_
+
+   chapter_01/generators.rst
+   chapter_02/detectors.rst
+   chapter_03/features.rst

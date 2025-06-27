@@ -218,6 +218,7 @@ TODO: fill in how to enable only for a specific type of export
 - `"return_type"` is a string indicating the type of data returned by the feature.
 
 Note: in the example below, then, a `"type"` of `SessionID` is assumed.
+
 ```json
   "SessionID": {
       "enabled": true,
@@ -287,7 +288,7 @@ To do this, you will need to carry out the following additional steps when writi
       Your output will contain one column with the "base" Feature value, and one additional column for each "subfeature" value.  
       *For example*: In the `LevelComplete` example, the `Subfeatures` function may return `['Count']`.  
 
-  Then in the output, there will be one column named "LevelComplete", and another named "LevelCompleteCount."  
+    Then in the output, there will be one column named "LevelComplete", and another named "LevelCompleteCount."  
 
 2. In the "**Code a feature extractor**" step,
   you will add an object to the list returned from `GetFeatureValues()` for each subfeature.  

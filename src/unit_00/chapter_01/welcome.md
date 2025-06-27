@@ -19,6 +19,8 @@ Together, the units describe all parts of the OpenGameData infrastructure.
 
 The units are as follows:
 
+<!-- TODO : update links here -->
+
 0. [Introduction & Organization](./index.rst):  
     An overview of the OpenGameData project and documentation.
 1. [OpenGameData Core Basics](../01_core-basics/index.rst):  

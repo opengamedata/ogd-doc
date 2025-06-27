@@ -1,6 +1,6 @@
-## Getting Started
+## Overview
 
-This document will help you to get up and running with the **`OpenGameData`**  tools.
+This chapter will help you to get up and running with the **`OpenGameData`**  tools.
 There are a few use-cases that this documentation will address - please review the following section to determine which case you need, and advance to the corresponding sections.
 
 ### OpenGameData Use-Cases
@@ -14,6 +14,8 @@ I need to...
 * [Perform OpenGameData Processing in my 3rd-Party Tool](#perform-opengamedata-processing-in-my-3rd-party-tool)
 
 #### Retrieve a Dataset from my OpenGameData Data Source
+
+<!-- TODO : update the many, many links here -->
 
 You should read the following portions of the documentation in order to retrieve a dataset:
 

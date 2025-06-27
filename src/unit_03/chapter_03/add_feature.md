@@ -300,7 +300,7 @@ To do this, you will need to carry out the following additional steps when writi
 3. In the "**Add feature configuration to the game's schema**", you will add an extra field to the Feature dictionary:
 
     - "subfeatures" maps to a sub-dictionary.  
-    Each element of the sub-dictionary has a key string, which we **strongly** recommend you match with the name(s) given in the corresponding Feature's  `Subfeatures()` function.  
+      Each element of the sub-dictionary has a key string, which we **strongly** recommend you match with the name(s) given in the corresponding Feature's  `Subfeatures()` function.  
 
     TODO : Add example
 

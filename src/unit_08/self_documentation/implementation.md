@@ -82,7 +82,7 @@ Each unit is, in turn, made up of several *Chapters*.
 
 #### Units
 
-The documentation source contains one folder for each section, containing the section chapters, as well as a unit index.
+The documentation source contains one folder for each unit, containing the section chapters, as well as a unit index.
 The unit index is always named `index.rst` and lists each chapter, acting as a table of contents for the unit.
 There is a [unit index template](../../util/templates/unit_index.rst) available.
 
@@ -98,32 +98,37 @@ There is a [unit overview template](../../util/templates/unit_name.rst) availabl
 
 Chapters are implemented with a similar structure to units. However, since they contain true content, they are made up of an `index.rst` document merging multiple **Markdown** shards.
 
-The pieces making up the chapter will be placed in a subfolder, with a numeric name like `01/`.
-The "assembly" **reStructuredText** file is then named `index.rst`, and uses the `.. mdinclude` directive to assemble the individual **Markdown** shards, shown in the [**reStructuredText** chapter template](../../util/templates/chapter_index.rst).
+The pieces making up the chapter will be placed in a subfolder, with a numeric name like `chapter_01/`.
+The "assembly" **reStructuredText** file is then named `<chapter_name>.rst`, and uses the `.. mdinclude` directive to assemble the individual **Markdown** shards, shown in the [**reStructuredText** chapter index template](../../util/templates/chapter_index.rst).
 The **Markdown** shards, in turn, will each begin with level-2 headers, and include only their section of the content.
-This is demonstrated in the [**Markdown** shard template](../../util/templates/chapter_shard.rst)
+This is demonstrated in the [**Markdown** shard template](../../util/templates/chapter_shard.rst).
+A chapter may have a single shard; it is not necessary to break the content down further for short chapters.
 
 #### Folder Structure
 
 Taking all the information given above, the structure of the documentation source has a structure similar to that demonstrated below:
 
-- 01/
+- unit_01/
     - chapter_1/
         - chapter_1.rst
         - ch1_shard_1.md
         - ch1_shard_2.md
-    - chapter_2.md
-    - chapter_3.md
+    - chapter_2/
+        - chapter_2.rst
+        - ch1_shard_1.md
+        - ch1_shard_2.md
+        - ch1_shard_3.md
     - . . .
     - index.rst
     - unit_a.md
-- 02/
+- unit_02/
+    - chapter_1/
+        - chapter_1.rst
+        - ch1_shard_1.md
     - chapter_2/
         - chapter_2.rst
-        - ch2_shard_1.md
-        - ch2_shard_2.md
-        - ch2_shard_3.md
-    - chapter_1.md
+        - ch1_shard_1.md
+        - ch1_shard_2.md
     - . . .
     - index.rst
     - unit_b.md

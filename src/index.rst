@@ -8,6 +8,7 @@ OpenGameData documentation
 
 .. toctree::
    :maxdepth: 2
+   :numbered: 2
    :caption: Contents:
 
    unit_00/index.rst

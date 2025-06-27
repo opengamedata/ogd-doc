@@ -10,6 +10,8 @@ Additionally, it covers the
 .. include:: ./processing.md
    :parser: myst_parser.sphinx_
 
+.. TODO : port from .dot definition to an inline mermaid chart instead. Or maybe a non-inline chart in own file, for reusability.
+
 Data processing is outlined by the graph below.
 
 .. graphviz:: ./architecture.dot

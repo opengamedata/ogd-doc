@@ -1,16 +1,6 @@
 OpenGameData Conventions & Meta-Documentation
 ========================================================
 
-..
-   Chapters: 
-   1. OGD docs self-documentation
-   2. OGD Software Platform
-   3. Coding Conventions & Python Tips
-   4. Project structures
-   5. API project structures
-   6. OGD History
-   7. OGD Glossary
-
 .. toctree::
    :maxdepth: 1
    :caption: OGD Conventions & Metadocs

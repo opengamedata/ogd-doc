@@ -1,11 +1,11 @@
  Chapter N: Chapter Name
 ========================
 
-.. .. include:: 01/first_shard.md
+.. .. include:: first_shard.md
    :parser: myst_parser.sphinx_
 
-.. .. include:: 01/second_shard.md
+.. .. include:: second_shard.md
    :parser: myst_parser.sphinx_
 
-.. .. include:: 01/etc.etc
+.. .. include:: etc.etc
    :parser: myst_parser.sphinx_

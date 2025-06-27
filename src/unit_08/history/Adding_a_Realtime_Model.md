@@ -1,5 +1,12 @@
 # Adding a Realtime model
 
+## Historical Note
+
+Below is the documentation from the original real-time dashboard tool we developed and tested in 2020.
+Its architecture became the prototype for the modular generator classes featured throughout the OpenGameData Core pipeline.
+
+## Original Content
+
 First, a bit of terminology:
 
 - **event**: A record of some game event, stored as a single row in the database.  

@@ -1,4 +1,4 @@
-Databases
+Chapter 03: Databases
 ===============================================
 
 .. include:: ogd_databases.md
@@ -8,4 +8,7 @@ Databases
    :parser: myst_parser.sphinx_
 
 .. include:: database_systems.md
+   :parser: myst_parser.sphinx_
+
+.. include:: event_monitor.md
    :parser: myst_parser.sphinx_

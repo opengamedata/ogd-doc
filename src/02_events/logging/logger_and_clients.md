@@ -1,8 +1,8 @@
-# OpenGameData Logger and Logging Clients
+## OpenGameData Logger and Logging Clients
 
 OpenGameData provides packages for logging events from game clients, and a PHP logger script to receive these events and place them into a database.
 
-## Client-Logger Communications
+### Client-Logger Communications
 
 The logging clients communicate with the logger script via HTTP POST requests.
 These use request parameters for data that is constant within a gameplay session, such as versioning and identifier variables, and a base-64-encoded body for data that varies per-event.
@@ -35,7 +35,7 @@ The elements of these dictionaries are as follows:
 
 These are decoded by the logger script, and recombined with the parameter items to form full events for storage into the configured database.
 
-## `opengamedata-unity`
+### `opengamedata-unity`
 
 The OGD client for the Unity game engine is developed and maintained at GitHub.
 Documentation on its use is included in the repository README.
@@ -44,14 +44,13 @@ You can access it at the following URL: [https://github.com/opengamedata/opengam
 If you wish to use the `opengamedata-unity` package, you can install it in your project from OpenUPM.
 The package page can be accessed at [https://openupm.com/packages/com.fieldday.opengamedata-unity](https://openupm.com/packages/com.fieldday.opengamedata-unity/)
 
-## `opengamedata-js-log`
+### `opengamedata-js-log`
 
 The OGD client for general JavaScript projects is also maintained at GitHub, along with README documentation.
 You can access it at the following URL: [https://github.com/opengamedata/opengamedata-js-log](https://github.com/opengamedata/opengamedata-js-log)
 
-
 To use the `opengamedata-js-log` package, you can install it in your project from NPM.
 The package can be accessed at [https://www.npmjs.com/package/opengamedata-js-log](https://www.npmjs.com/package/opengamedata-js-log)
 
-## `opengamedata-logger`
+### `opengamedata-logger`
 

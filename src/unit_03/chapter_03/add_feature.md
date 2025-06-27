@@ -317,5 +317,5 @@ The rules for how a second-order feature is given values from its requested firs
 There are a few "sub-types" of the Feature class, which add provide small additional conveniences. Your Feature subclass can inherit from these types instead of the base `Feature`:  
 
 - `PerLevelFeature`  
-This Feature subclass adds validation to automatically check if the `'level'` element of each incoming Event object matches the current Feature object's `CountIndex` property, and ignores the Event if it does not.  
-This ensures the `_extractFromEvent` function is only run on the instance of a given Feature intended to process data for that level.
+  This Feature subclass adds validation to automatically check if the `'level'` element of each incoming Event object matches the current Feature object's `CountIndex` property, and ignores the Event if it does not.  
+  This ensures the `_extractFromEvent` function is only run on the instance of a given Feature intended to process data for that level.

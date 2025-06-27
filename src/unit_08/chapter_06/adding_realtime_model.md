@@ -2,7 +2,7 @@
 
 ## Historical Note
 
-Below is the documentation from the original real-time dashboard tool we developed and tested in 2020.
+Originally named `Adding_a_Realtime_Model.md` (not a very nice naming convention), below is the documentation from the original real-time dashboard tool we developed and tested in 2020.
 Its architecture became the prototype for the modular generator classes featured throughout the OpenGameData Core pipeline.
 
 ## Original Content

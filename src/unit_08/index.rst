@@ -1,4 +1,4 @@
-Unit 8: OpenGameData Conventions & Meta-Documentation
+OpenGameData Conventions & Meta-Documentation
 ========================================================
 
 ..
@@ -15,10 +15,10 @@ Unit 8: OpenGameData Conventions & Meta-Documentation
    :maxdepth: 1
    :caption: OGD Conventions & Metadocs
 
-   self_documentation/self_documentation.rst
-   software_platform/software_platform.rst
-   python_conventions/python_conventions.rst
-   project_conventions/project_conventions.rst
-   api_conventions/api_conventions.rst
-   history/fun_historic_bits.md
-   glossary.md
+   chapter_01/self_documentation.rst
+   chapter_02/software_platform.rst
+   chapter_03/python_conventions.rst
+   chapter_04/project_conventions.rst
+   chapter_05/api_conventions.rst
+   chapter_06/history.rst
+   appendix/appendix.rst

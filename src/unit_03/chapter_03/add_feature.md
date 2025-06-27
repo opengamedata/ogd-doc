@@ -1,13 +1,13 @@
-# Adding a Feature
+## Adding a Feature
 
 In order to add a new feature for a game, you must complete the following steps:
 
-## **1. Code a feature extractor**
+### **1. Code a feature extractor**
 
 The first step is to write the individual feature extractor.  
 This should be a python file, placed in the `<ogd-core-root>/src/ogd/games/<GAME_NAME>/features` folder, which inherits from the Extractor class (`<ogd-core-root>/src/ogd/core/extractors/Extractor.py`).
 
-### Required functions
+#### Required functions
 
 At minimum, you must write an `__init__(...)` function, and implement the functions listed below.
 Do not change the parameters of the other functions, as they are implementing abstract functions of the base class.  
@@ -52,7 +52,7 @@ Do not change the parameters of the other functions, as they are implementing ab
   For a basic feature, there should only be one object in the returned list, although that one object could contain many elements.
   For cases where you place multiple objects into the returned list, see the "**Subfeatures**" section under "**Optional features for your Features**."  
 
-### Feature Properties
+#### Feature Properties
 
 When writing your `Feature` subclass, there are a few built-in properties that may be useful, especially for writing the `_extract...` function(s).
 
@@ -78,7 +78,7 @@ When writing your `Feature` subclass, there are a few built-in properties that m
   You will need to check if `CountIndex` matches whatever part of the event data indicates the level/quest/survey/etc. number.
   Alternately, you might find another type to use as your class' base to handle this automatically, listed in the **Feature sub-types** section later in this document.
 
-## **2. Add feature to features package**
+### **2. Add feature to features package**
 
 Next, you need to ensure your new feature is included when the game's Loader class imports the `features` folder.
 Open the `<ogd-core-root>/games/<GAME_NAME>/features/__init__.py` file, which should look something like this:
@@ -99,7 +99,7 @@ from . import SessionID
 
 Add the name of your feature class to the `__all__` list, and add the `import` for your feature class in the list of imports below.
 
-## **3. Register feature in the game's Loader**
+### **3. Register feature in the game's Loader**
 
 Now, we must ensure your game's Loader class knows how to load actual instances of your Feature.
 This will be done in the `<ogd-core-root>/games/<GAME_NAME>/<GameName>Loader.py` file
@@ -132,7 +132,7 @@ Note that any parameters you add to `__init__` must:
 - Take arguments available to the Loader class, such as `id` in the `SessionID` case for the example above, or
 - Take arguments from the schema_args, which are defined in the config item in `<GAME_NAME>.json` (see step 4).
 
-## **4. Add feature configuration to the game's schema**
+### **4. Add feature configuration to the game's schema**
 
 All of the coding required was covered in the first three steps.
 You wrote the code to perform extraction, then registered the class in the set of extractors, and added code to create instances of your Feature extractor.
@@ -205,7 +205,7 @@ An example where you may want to change the name would be an `IdleTime` feature 
 You might name the entry `IdleTime30` if you configure the `threshold` value to 30 seconds;
 you could then configure a second instance to have a 60 second `threshold` and name the entry `IdleTime60`.  
 
-### Aggregate Features
+#### Aggregate Features
 
 If your Feature is meant to function as an "aggregate" feature, you will add it to the `aggregate` dictionary.
 The sub-dictionary for your Feature needs four elements: `"enabled"`, `"type"`, `"description"`, and `"return_type"`.  
@@ -241,7 +241,7 @@ For the `IdleTime` example, you would add the following to your `aggregate` dict
 
 You will then have access to the parameter in step 3 (adding the feature to `_loadFeature`) as an element of `schema_args`.
 
-### Per-count Features
+#### Per-count Features
 
 On the other hand, if your Feature is meant to function as a "per-count" feature, you'll add it to the `per_count` dictionary.
 The process is similar to adding a feature to `aggregate`, requiring `"enabled"`, `"type"`, `"description"`, and `"return_type"` as elements.
@@ -264,12 +264,12 @@ In the "per-count" case, you must include `"count"` and `"prefix"` elements as w
 
 As with "aggregate" features, "per-count" features can have additional elements in their sub-dictionaries, which can then be accessed for use as parameters in the `schema_args` variable in `_loadFeature` (see step 3).
 
-## Optional features for your Features
+### Optional features for your Features
 
 The preceding sections discussed the minimum requirements for creating a Feature subclass.
 However, there are additional features (lower-case 'f', meaning *features* as in "things a system can do") available to you when programming your Feature:  
 
-### **Subfeatures**  
+#### **Subfeatures**  
 
 A single Feature class can be written as a composite of multiple metrics, with each metric having its own column in the output.
 Each additional metric is considered a "Subfeature" of the Feature subclass.  
@@ -304,7 +304,7 @@ To do this, you will need to carry out the following additional steps when writi
 
     TODO : Add example
 
-### **Second-Order Features***
+#### **Second-Order Features***
 
 The rules for how a second-order feature is given values from its requested first-order features:
 
@@ -312,7 +312,7 @@ The rules for how a second-order feature is given values from its requested firs
 2. If the current instance is owned by a PlayerProcessor, then it will run against instances of requested features at the population level (the parent of the player), the instances for the given player (i.e. if the Player ID is PlayerA, all instances for PlayerA but not for PlayerB, PlayerC, etc.), and instances for the sessions of the given player (children of the given player).
 3. If the current instance is owned by a SessionProcessor, then it will run against instances of requested features at the population level (the grandparent of the session), the instances for the player of the given session (the parent of the session), and instances for the given session.
 
-### **Feature sub-types**
+#### **Feature sub-types**
 
 There are a few "sub-types" of the Feature class, which add provide small additional conveniences. Your Feature subclass can inherit from these types instead of the base `Feature`:  
 

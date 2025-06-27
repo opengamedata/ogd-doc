@@ -1,17 +1,17 @@
-# OpenGameData Documentation Welcome
+## Introduction
 
 Welcome to the OpenGameData Documentation Project.
 This website will, at some point, describe all aspects of the OpenGameData tools for collecting, processing, analyzing, and distributing event-based data from educational games and game-like interactive digital media.
 
 We recommend you check the [getting started](./getting_started.md) page to determine which of the many use-cases supported by the OpenGameData tools apply to you, and by extension, which parts of this website you should read.
-The rest of this page will introduce you to the structure of our documentation, as well as the variety of tools available from OpenGameData.
+The rest of this chapter will introduce you to the structure of our documentation, and briefly introduce you to a few of the tools available from OpenGameData.
 
-## Problems with this Website?
+### Problems with this Website?
 
 If you encounter any issues with this documentation site, such as missing images or broken links, please feel free to report the issue on our documentation GitHub page:
 [Submit an Issue Report](https://github.com/opengamedata/opengamedata-doc/issues/new?assignees=LswaN58&labels=bug&projects=&template=bug_report.md&title=)
 
-## Documentation Organization
+### Documentation Organization
 
 The OpenGameData documentation is broken down into 9 *Units*, plus the "Unit 0" containing this introductory material.
 Each unit is made up of several chapters.
@@ -39,11 +39,3 @@ The units are as follows:
     Documentation for contributors working on core OGD infrastructure and documentation, covering topics such as coding conventions and our software reference platform.
 9. [Core API Reference](../reference/index.rst):  
     API reference for the OpenGameData Core Python package.
-
-## OpenGameData Pipeline
-
-<font style="color:tomato">STUB: This section is on the to-do list.</font>
-
-## OpenGameData Tools & Packages
-
-<font style="color:tomato">STUB: This section is on the to-do list.</font>

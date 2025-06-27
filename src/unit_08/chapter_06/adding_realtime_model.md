@@ -86,10 +86,11 @@ Below, we will cover the steps in detail.
 - The `"type"` is whatever string was chosen for the `==` comparison in the `if-elif-else` block in step two.
     This is what allows the `ModelManager` to determine the correct type of model to instantiate.
     Again, if following our naming convention, this is the prefix portion of the `Model` subclass name.  
-- The `"levels"` entry specifies at which levels of the game the player data may be evaluated. For example, if a model was trained on data from levels 8-10 of a game, you may choose to specify `"levels" : [8, 9, 10]` in the JSON file.
+- The `"levels"` entry specifies at which levels of the game the player data may be evaluated.
+    For example, if a model was trained on data from levels 8-10 of a game, you may choose to specify `"levels" : [8, 9, 10]` in the JSON file.
     In this case, the system will only evaluate the model if a given player is in one of those three levels.
     If you leave `"levels"` as an empty list, the system will assume the model is valid for **all** levels.  
-- `"params"` specifies the arguments to be passed to a `Model` subclass' *unique* parameters.
+- `"params"` specifies the arguments to be passed to a `Model` subclass' _unique_ parameters.
     That is, any parameters additional to the `levels` parameter required by the `Model` base class.
     The `"params"` should be specified as a dictionary of parameter-argument pairs.
     For example, if a model requires parameters `a`, `b`, and `c`, then the `"params"` entry should have the following form:

@@ -1,9 +1,12 @@
-Unit 6: OpenGameData APIs
-=========================
+OpenGameData APIs
+=================
 
 .. toctree::
    :maxdepth: 1
-   :caption: OpenGameData APIs
+   :caption: OGD APIs
 
-   ./installation/installation.rst
-   ./resources.md
+.. include:: apis.md
+      :parser: myst_parser.sphinx_
+
+   chapter_01/installation.rst
+   appendix/appendix.md

@@ -1,4 +1,4 @@
-Unit 4: `opengamedata-core` Architecture
+OpenGameData Core Architecture
 ========================================
 
 .. toctree::

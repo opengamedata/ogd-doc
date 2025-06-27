@@ -51,8 +51,8 @@ Once you have determined a set of events and the data to be logged with them, yo
 We currently have packages for Unity and JavaScript game projects.
 To get started, please see the readme guide for the package appropriate for your game:
 
-* For Unity: `opengamedata-unity` user's [guide](https://github.com/opengamedata/opengamedata-unity#readme)
-* For JavaScript: `opengamedata-js-log` user's [guide](https://github.com/opengamedata/opengamedata-js-log#readme)
+- For Unity: `opengamedata-unity` user's [guide](https://github.com/opengamedata/opengamedata-unity#readme)
+- For JavaScript: `opengamedata-js-log` user's [guide](https://github.com/opengamedata/opengamedata-js-log#readme)
 
 **Note** : If your implementation uses the Open Game Data logging servers, a table will need to be created for your game during this step.
 This will include a database table on the main production server and optionally the CI/testing server.

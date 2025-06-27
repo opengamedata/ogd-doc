@@ -1,9 +1,4 @@
-## Overview
-
-This chapter will help you to get up and running with the **`OpenGameData`**  tools.
-There are a few use-cases that this documentation will address - please review the following section to determine which case you need, and advance to the corresponding sections.
-
-### OpenGameData Use-Cases
+## OpenGameData Use-Cases
 
 I need to...
 
@@ -13,7 +8,7 @@ I need to...
 * [Perform Feature Engineering on my Raw Event Data](#perform-feature-engineering-on-my-raw-event-data)
 * [Perform OpenGameData Processing in my 3rd-Party Tool](#perform-opengamedata-processing-in-my-3rd-party-tool)
 
-#### Retrieve a Dataset from my OpenGameData Data Source
+### Retrieve a Dataset from my OpenGameData Data Source
 
 <!-- TODO : update the many, many links here -->
 
@@ -27,7 +22,7 @@ You should read the following portions of the documentation in order to retrieve
 3. Check your [OpenGameData configuration](../01_core-basics/configurations.md)
 4. Perform your [dataset export](../01_core-basics/exports.md)
 
-#### Integrate a new Game with OpenGameData
+### Integrate a new Game with OpenGameData
 
 You should read the following portions of the documentation in order to integrate a new game with OpenGameData.:
 
@@ -37,18 +32,18 @@ You should read the following portions of the documentation in order to integrat
     * When choosing between a "Package" and "Local Source" install, you should choose the ["Local Source" option](../01_core-basics/installation/installation.rst#installation-as-local-source-copy)
 3. Finally, [add a configuration](../01_core-basics/configurations.md)
 
-#### Integrate a new Data Source with OpenGameData
+### Integrate a new Data Source with OpenGameData
 
 <font style="color:tomato">STUB: This section is on the to-do list.</font>
 
-#### Perform Feature Engineering on my Raw Event Data
+### Perform Feature Engineering on my Raw Event Data
 
 <font style="color:tomato">STUB: This section is on the to-do list.</font>
 
-#### Perform OpenGameData Processing in my 3rd-Party Tool
+### Perform OpenGameData Processing in my 3rd-Party Tool
 
 <font style="color:tomato">STUB: This section is on the to-do list.</font>
 
-### Special Case: I am a Data Team Intern at Field Day Lab
+## Special Case: I am a Data Team Intern at Field Day Lab
 
 <font style="color:tomato">STUB: This section is on the to-do list.</font>

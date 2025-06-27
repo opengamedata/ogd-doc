@@ -5,7 +5,6 @@ Introduction to OpenGameData
    :maxdepth: 1
    :caption: Intro to OpenGameData
 
-
 .. include:: intro.md
       :parser: myst_parser.sphinx_
 

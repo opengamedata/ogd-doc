@@ -1,6 +1,9 @@
 Chapter 2: Installation
 ===============================================
 
+.. include:: logging_overview.md
+   :parser: myst_parser.sphinx_
+
 .. include:: logger_and_clients.md
    :parser: myst_parser.sphinx_
 

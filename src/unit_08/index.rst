@@ -15,7 +15,7 @@ OpenGameData Conventions & Meta-Documentation
    :maxdepth: 1
    :caption: OGD Conventions & Metadocs
 
-.. include:: core_basics.md
+.. include:: meta_documentation.md
       :parser: myst_parser.sphinx_
 
    chapter_01/self_documentation.rst

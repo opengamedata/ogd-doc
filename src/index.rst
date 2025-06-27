@@ -10,15 +10,15 @@ OpenGameData documentation
    :maxdepth: 2
    :caption: Contents:
 
-   00/index.rst
-   01/index.rst
-   02/index.rst
-   03/index.rst
-   04/index.rst
-   05/index.rst
-   06/index.rst
-   07/index.rst
-   08/index.rst
+   unit_00/index.rst
+   unit_01/index.rst
+   unit_02/index.rst
+   unit_03/index.rst
+   unit_04/index.rst
+   unit_05/index.rst
+   unit_06/index.rst
+   unit_07/index.rst
+   unit_08/index.rst
 
    reference/index.rst
 

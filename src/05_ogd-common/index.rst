@@ -8,7 +8,7 @@ Unit 5: `opengamedata-common` Package
       This chapter will describe the various modules available in `ogd-common`.
 
    connectors/connectors.rst
-   .. models/models.rst
-   schemas/schemas.rst
-   utils/utils.rst
-   Adding_a_Database.md
+   models/models.rst
+   .. schemas/schemas.rst
+   .. utils/utils.rst
+   .. Adding_a_Database.md

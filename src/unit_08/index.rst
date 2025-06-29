@@ -1,12 +1,12 @@
-OpenGameData Conventions & Meta-Documentation
-========================================================
+Unit 8
+======
+
+.. include:: meta_documentation.md
+      :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 1
    :caption: OGD Conventions & Metadocs
-
-.. include:: meta_documentation.md
-      :parser: myst_parser.sphinx_
 
    chapter_01/self_documentation.rst
    chapter_02/software_platform.rst

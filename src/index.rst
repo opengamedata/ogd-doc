@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+==========================
 OpenGameData Documentation
-========================================
+==========================
 
 .. toctree::
    :maxdepth: 2
@@ -23,6 +24,7 @@ OpenGameData Documentation
 
    reference/index.rst
 
+==================
 Indices and tables
 ==================
 

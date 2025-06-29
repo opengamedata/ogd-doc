@@ -1,9 +1,9 @@
-Unit 0
-======
+############################
+Introduction to OpenGameData
+############################
 
 .. toctree::
    :maxdepth: 1
-   :caption: Introduction to OpenGameData
 
    chapter_01/welcome.rst
    chapter_02/getting_started.rst

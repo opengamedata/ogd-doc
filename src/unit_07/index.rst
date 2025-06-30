@@ -1,11 +1,12 @@
-Unit 7
-======
-
-.. include:: analysis_and_viz.md
-      :parser: myst_parser.sphinx_
+OpenGameData APIs
+=================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Data Analysis & Viz
+   :maxdepth: 1
+   :caption: OGD APIs
 
-   chapter_01/overview.rst
+.. include:: apis.md
+      :parser: myst_parser.sphinx_
+
+   chapter_01/installation.rst
+   appendix/appendix.md

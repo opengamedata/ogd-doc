@@ -1,12 +1,13 @@
-OpenGameData Core Architecture
-========================================
+Unit 3: Data Generators: Detectors & Extractors
+===============================================
 
 .. toctree::
    :maxdepth: 1
-   :caption: OGD Architecture
+   :caption: Detectors & Extractors
 
-.. include:: core_architecture.md
+.. include:: generators.md
       :parser: myst_parser.sphinx_
 
-   chapter_01/overview.rst
-   chapter_02/core.rst
+   chapter_01/generators.rst
+   chapter_02/detectors.rst
+   chapter_03/features.rst

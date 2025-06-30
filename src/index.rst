@@ -12,7 +12,6 @@ OpenGameData Documentation
    :numbered: 2
    :caption: Contents:
 
-   unit_00/index.rst
    unit_01/index.rst
    unit_02/index.rst
    unit_03/index.rst
@@ -21,6 +20,7 @@ OpenGameData Documentation
    unit_06/index.rst
    unit_07/index.rst
    unit_08/index.rst
+   unit_09/index.rst
 
    reference/index.rst
 

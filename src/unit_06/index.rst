@@ -1,12 +1,14 @@
-OpenGameData APIs
-=================
+OpenGameData Common Modules
+===========================
 
 .. toctree::
    :maxdepth: 1
-   :caption: OGD APIs
+   :caption: OpenGameData Common
 
-.. include:: apis.md
+.. include:: ogd_common.md
       :parser: myst_parser.sphinx_
 
-   chapter_01/installation.rst
-   appendix/appendix.md
+   chapter_01/connectors.rst
+   chapter_02/models.rst
+   chapter_03/schemas.rst
+   chapter_04/utils.rst

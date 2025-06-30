@@ -1,14 +1,12 @@
-OpenGameData Common Modules
-===========================
+OpenGameData Core Architecture
+========================================
 
 .. toctree::
    :maxdepth: 1
-   :caption: OpenGameData Common
+   :caption: OGD Architecture
 
-.. include:: ogd_common.md
+.. include:: core_architecture.md
       :parser: myst_parser.sphinx_
 
-   chapter_01/connectors.rst
-   chapter_02/models.rst
-   chapter_03/schemas.rst
-   chapter_04/utils.rst
+   chapter_01/overview.rst
+   chapter_02/core.rst

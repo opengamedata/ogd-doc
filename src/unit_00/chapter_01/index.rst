@@ -10,7 +10,7 @@ This website will, at some point, describe all aspects of the OpenGameData tools
 We recommend you check the [getting started](./getting_started.md) page to determine which of the many use-cases supported by the OpenGameData tools apply to you, and by extension, which parts of this website you should read.
 The rest of this chapter will introduce you to the structure of our documentation, and briefly introduce you to a few of the tools available from OpenGameData.
 
-.. include:: welcome.md
+.. include:: _welcome.md
    :parser: myst_parser.sphinx_
 
 .. include:: pipeline.md

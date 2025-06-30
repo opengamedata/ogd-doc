@@ -8,5 +8,5 @@ Introduction to OpenGameData
    chapter_01/index.rst
    chapter_02/index.rst
 
-.. include:: intro.md
+.. include:: _intro.md
       :parser: myst_parser.sphinx_

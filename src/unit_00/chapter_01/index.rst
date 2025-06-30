@@ -1,6 +1,6 @@
-***********************************
-Chapter 01: Welcome to OpenGameData
-***********************************
+***********************
+Welcome to OpenGameData
+***********************
 
 Welcome to the OpenGameData Documentation Project.
 This website will, at some point, describe all aspects of the OpenGameData tools for collecting, processing, analyzing, and distributing event-based data from educational games and game-like interactive digital media.

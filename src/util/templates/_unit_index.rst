@@ -1,5 +1,6 @@
+##########
 Unit Title
-==========
+##########
 
 .. toctree::
    :maxdepth: 1

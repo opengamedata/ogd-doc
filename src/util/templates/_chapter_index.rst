@@ -1,5 +1,6 @@
- Chapter N: Chapter Name
-========================
+************
+Chapter Name
+************
 
 .. .. include:: first_shard.md
    :parser: myst_parser.sphinx_

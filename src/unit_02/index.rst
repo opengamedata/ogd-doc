@@ -3,7 +3,7 @@ OpenGameData Core Basics
 ########################
 
 .. include:: _core_basics.md
-      :parser: myst_parser.sphinx_
+   :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 1

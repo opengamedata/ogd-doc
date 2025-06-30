@@ -41,11 +41,13 @@ source_suffix = {
 }
 
 all_units = {f"unit_{n:02}/*" for n in range(9)}
-ignore_units = list(all_units.difference({f"unit_{UNIT_EDIT_MODE:02}"}).union("reference/*") ) if UNIT_EDIT_MODE is not None else []
+inactive_units = all_units.difference({f"unit_{UNIT_EDIT_MODE:02}/*"})
+conditional_excludes = list( inactive_units.union({"reference/*"}) ) if UNIT_EDIT_MODE is not None else []
 
 exclude_patterns = [
     "util/templates/*",
-] + ignore_units
+] + conditional_excludes
+print(f"Exclude patterns are:\n{sorted(exclude_patterns)}")
 
 nitpicky = True
 

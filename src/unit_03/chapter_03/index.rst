@@ -1,7 +1,8 @@
-Chapter 03: Databases
-===============================================
+*************
+OGD Databases
+*************
 
-.. include:: ogd_databases.md
+.. include:: _ogd_databases.md
    :parser: myst_parser.sphinx_
 
 .. include:: add_database.md

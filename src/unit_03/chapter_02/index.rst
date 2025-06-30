@@ -1,7 +1,8 @@
-Chapter 2: Installation
-===============================================
+*******************
+Event Logging Setup
+*******************
 
-.. include:: logging_overview.md
+.. include:: _logging_setup.md
    :parser: myst_parser.sphinx_
 
 .. include:: logger_and_clients.md

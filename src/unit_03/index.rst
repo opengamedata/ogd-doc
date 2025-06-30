@@ -1,17 +1,15 @@
-Unit 2: Game Event Logging
-========================================
+######################
+Data Types and Logging
+######################
 
 .. toctree::
    :maxdepth: 1
-   :caption: Game Logging
+   :caption: Data Types and Logging
 
-.. TODO : determine whether we really need this include, or can simply use md, as is tested with direct inclusion of intro.md below.
-
-.. include:: core_basics.md
+.. include:: _data_types.md
       :parser: myst_parser.sphinx_
 
-   intro.md
-   chapter_01/event_schema.md
-   chapter_02/logging.rst
-   chapter_03/databases.rst
-   chapter_04/features.rst
+   chapter_01/index.rst
+   chapter_02/index.rst
+   chapter_03/index.rst
+   chapter_04/index.rst

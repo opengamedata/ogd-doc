@@ -1,4 +1,4 @@
-# Event Schemas
+## Event Schemas
 
 This document covers the standard Open Game Data Event Schema, as well as how to design custom per-event schemas for specific parts of the `Event` data structure.
 
@@ -44,7 +44,7 @@ The next table summarizes the actual columns and the properties exposing those c
 | GameState          | `dict`      | Contextual    | A JSON-style dictionary for any data (other than app ID) specific to a particular game. This is used to provide context for each specific event. For example, in a level-based puzzle game, the `GameState` column might include the current level and score. By convention, we record the state at the instant before the event occurred, and reserve any updated state values for the `EventData` column. For example, "current score" would be an element of `GameState`, common across all events, while "new score" would be an element of `EventData`, as it is specific to only those events that modify score. |
 | EventData          | `dict`      | Contextual    | A JSON-style dictionary for any data (other than event name) specific to a particular type of event. This is used to indicate what, specifically, happened within a given event. For example, in a level-based puzzle game, the `EventData` for an event named `"place_tile"` might include the location and type of tile placed, as well as the new score on the level after placing the tile. |
 
-## Event Tables
+### Event Tables
 
 While the table above specifies all elements of the OpenGameData Event Schema, it may be helpful to visualize the data in tabular form, as the schema is designed for compatibility with tabular formats.
 Given the list of elements above, then, a few example rows for a hypothetical puzzle game are given below.

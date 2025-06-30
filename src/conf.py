@@ -18,11 +18,12 @@ OGD_CORE_PATH = os.environ.get('OGD_CORE_PATH', '../opengamedata-core/src/')
 sys.path.insert(0, str(Path(OGD_CORE_PATH).resolve()))
 print(f"Found ogd-core path as {OGD_CORE_PATH}, which resolves to {str(Path(OGD_CORE_PATH).resolve())}")
 
+UNIT_EDIT_MODE = None
 
 # -- Project information -----------------------------------------------------
 
 project = 'OpenGameData'
-copyright = '2024, Field Day Lab'
+copyright = '2025, Field Day Lab'
 author = 'Luke Swanson'
 language = 'en'
 
@@ -39,9 +40,12 @@ source_suffix = {
     # '.dot' : 'graphviz'
 }
 
+all_units = {f"unit_{n:02}/*" for n in range(9)}
+ignore_units = list(all_units.difference({f"unit_{UNIT_EDIT_MODE:02}"}).union("reference/*") ) if UNIT_EDIT_MODE is not None else []
+
 exclude_patterns = [
     "util/templates/*",
-]
+] + ignore_units
 
 nitpicky = True
 

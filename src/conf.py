@@ -18,8 +18,6 @@ OGD_CORE_PATH = os.environ.get('OGD_CORE_PATH', '../opengamedata-core/src/')
 sys.path.insert(0, str(Path(OGD_CORE_PATH).resolve()))
 print(f"Found ogd-core path as {OGD_CORE_PATH}, which resolves to {str(Path(OGD_CORE_PATH).resolve())}")
 
-UNIT_EDIT_MODE = None
-
 # -- Project information -----------------------------------------------------
 
 project = 'OpenGameData'
@@ -30,8 +28,22 @@ language = 'en'
 # The full version, including alpha/beta/rc tags
 release = '1.0'
 
-
 # -- General configuration ---------------------------------------------------
+
+UNIT_EDIT_MODE = None
+
+conditional_excludes = []
+if UNIT_EDIT_MODE is not None:
+    inactive_units = {f"unit_{n:02}/*" for n in range(9) if n != UNIT_EDIT_MODE}
+    conditional_excludes = list( inactive_units.union({"reference/*"}) )
+manual_excludes = [
+    "util/templates/*",
+]
+
+exclude_patterns = manual_excludes + conditional_excludes
+print(f"Exclude patterns are:\n{sorted(exclude_patterns)}")
+
+nitpicky = True
 
 source_suffix = {
     '.rst' : 'restructuredtext',
@@ -39,17 +51,6 @@ source_suffix = {
     '.md'  : 'markdown'
     # '.dot' : 'graphviz'
 }
-
-all_units = {f"unit_{n:02}/*" for n in range(9)}
-inactive_units = all_units.difference({f"unit_{UNIT_EDIT_MODE:02}/*"})
-conditional_excludes = list( inactive_units.union({"reference/*"}) ) if UNIT_EDIT_MODE is not None else []
-
-exclude_patterns = [
-    "util/templates/*",
-] + conditional_excludes
-print(f"Exclude patterns are:\n{sorted(exclude_patterns)}")
-
-nitpicky = True
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom

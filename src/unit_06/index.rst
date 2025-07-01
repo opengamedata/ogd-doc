@@ -1,7 +1,8 @@
+###########################
 OpenGameData Common Modules
-===========================
+###########################
 
-.. include:: ogd_common.md
+.. include:: _ogd_common.md
    :parser: myst_parser.sphinx_
 
 .. toctree::

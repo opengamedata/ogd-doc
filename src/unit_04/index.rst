@@ -1,13 +1,14 @@
-Unit 3: Data Generators: Detectors & Extractors
-===============================================
+#######################################
+Data Generators: Detectors & Extractors
+#######################################
 
-.. include:: generators.md
+.. include:: _generators.md
    :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 1
    :caption: Detectors & Extractors
 
-   chapter_01/generators.rst
-   chapter_02/detectors.rst
-   chapter_03/features.rst
+   chapter_01/index.rst
+   chapter_02/index.rst
+   chapter_03/index.rst

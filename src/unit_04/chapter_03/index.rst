@@ -1,7 +1,8 @@
-Chapter 3: Feature Extractors
-=============================
+******************
+Feature Extractors
+******************
 
-.. include:: features.md
+.. include:: _features.md
    :parser: myst_parser.sphinx_
 
 .. include:: add_feature.md

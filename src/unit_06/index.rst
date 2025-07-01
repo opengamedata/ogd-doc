@@ -9,7 +9,7 @@ OpenGameData Common Modules
    :maxdepth: 1
    :caption: OpenGameData Common
 
-   chapter_01/connectors.rst
-   chapter_02/models.rst
-   chapter_03/schemas.rst
-   chapter_04/utils.rst
+   chapter_01/index.rst
+   chapter_02/index.rst
+   chapter_03/index.rst
+   chapter_04/index.rst

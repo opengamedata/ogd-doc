@@ -1,5 +1,6 @@
-Unit 9: Core API Reference
-==========================
+##################
+Core API Reference
+##################
 
 .. toctree::
    :maxdepth: 1

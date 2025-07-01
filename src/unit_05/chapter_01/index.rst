@@ -1,8 +1,9 @@
-Architecture Chapter 1: Overview
-========================================
+*********************
+Architecture Overview
+*********************
 
-This chapter covers a high-level architectural view of the OpenGameData infrastructure, including the various tools provided by the OpenGameData comunity.
-Additionally, it covers the 
+.. include:: ./_overview.md
+   :parser: myst_parser.sphinx_
 
 .. include:: ./storage.md
    :parser: myst_parser.sphinx_

@@ -1,4 +1,4 @@
-# Chapter 2: Coding Conventions
+## Coding Conventions
 
 A summary of a few conventions used throughout the various OGD codebases:
 
@@ -7,11 +7,11 @@ A few notes:
 - None of these are really *mandatory* in any sense, but they do help keep things consistent and organized.
 - Most of the codebase(s) are written in Python, so most of these conventions are Python-focused.
 
-## Software Platform
+### Software Platform
 
-We use the software packages and versions listed in our Open Game Data Reference Platform [document](../software_platform/software_platform.rst)
+We use the software packages and versions listed in our Open Game Data Reference Platform [document](../chapter_02/index.rst)
 
-## Casing
+### Casing
 
 We generally use different casing conventions for different parts of the code:
 
@@ -33,14 +33,14 @@ We generally use different casing conventions for different parts of the code:
       `_x` and `_y` exist only to hold values temporarily to simplify the code using those values.
       Thus, `_x` and `_y` are considered "temp" variables and have the `_` prefix.
 
-## Alignment
+### Alignment
 
-## Quote Characters
+### Quote Characters
 
 - When defining a string variable, use double-quotes: `"..."`.  
 - When using a string index into a dictionary, use single-quotes: `'...'`
 
-## Type Hinting
+### Type Hinting
 
 Python does not have formal type-checking, but provides type "hints" to help a linter pre-check for potential type errors.
 In general, we do our best to add type hints wherever practical and cut down on exceptions.  
@@ -73,7 +73,7 @@ For function params
 3. **Function return values**:
     <font style="color:tomato">STUB: This section is on the to-do list.</font>
 
-## Comment Blocks
+### Comment Blocks
 
 Each module, class, and function should have a comment block.
 The blocks should use the Sphinx style; this style can be configured in the **autoDocstring** extension for **VS Code**.
@@ -102,7 +102,7 @@ Detailed paragraph, if needed, using Markdown formatting.
 """
 ```
 
-### Class Comments
+#### Class Comments
 
 For all abstract classes, the comment block should include a line listing all abstract functions to be implemented.
 For example:
@@ -115,9 +115,9 @@ All subclasses must implement the `_open` and `_close` functions.
 """
 ```
 
-### Function Comments
+#### Function Comments
 
-## Organization of Imports in a Module
+### Organization of Imports in a Module
 
 Generally, the imports in a file are organized into sections, with each section marked by a comment.
 
@@ -151,7 +151,7 @@ For easy copy-paste of section comments:
 # import local files
 ```
 
-## Organization of Functions in a Class
+### Organization of Functions in a Class
 
 Generally, the functions of a class are organized into sections, with each section marked by a comment.
 

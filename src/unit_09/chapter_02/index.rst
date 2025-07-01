@@ -1,5 +1,9 @@
-Unit 7, Chapter 2: Open Game Data Software Platform
-===================================================
+********************************
+Open Game Data Software Platform
+********************************
+
+.. include:: ./_software_platform.md
+   :parser: myst_parser.sphinx_
 
 .. include:: ../../../platform/platform.md
    :parser: myst_parser.sphinx_

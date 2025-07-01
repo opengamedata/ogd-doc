@@ -1,5 +1,9 @@
-Chapter 6: OpenGameData History
-===============================================
+********************
+OpenGameData History
+********************
+
+.. include:: _history.md
+   :parser: myst_parser.sphinx_
 
 .. include:: fun_historic_bits.md
    :parser: myst_parser.sphinx_

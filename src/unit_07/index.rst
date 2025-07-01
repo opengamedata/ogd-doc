@@ -1,12 +1,13 @@
+#################
 OpenGameData APIs
-=================
+#################
 
-.. include:: apis.md
+.. include:: _apis.md
    :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 1
    :caption: OGD APIs
 
-   chapter_01/installation.rst
-   appendix/appendix.md
+   chapter_01/index.rst
+   appendix/index.rst

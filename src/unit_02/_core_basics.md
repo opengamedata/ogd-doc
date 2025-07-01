@@ -1,4 +1,4 @@
-## Unit 1: OpenGameData Core Basics
+## Overview
 
 This unit introduces you to the basic operation of the OpenGameData "Core" processing pipeline, which is usually, but not always, installed as a Python library called `opengamedata-core`.
 These names are used roughly interchangeably, and occasionally abbreviated to "OGD Core" or `ogd-core`.

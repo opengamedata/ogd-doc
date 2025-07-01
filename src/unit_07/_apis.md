@@ -1,3 +1,3 @@
-## Unit 06: OpenGameData Web APIs
+## Overview
 
 This unit covers the various API services built on OpenGameData.

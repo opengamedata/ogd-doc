@@ -87,6 +87,7 @@ The unit index is always named `index.rst` and lists each chapter, acting as a t
 There is a [unit index template](../../util/templates/unit_index.rst) available.
 
 The unit folder should also include a markdown file named `_<unit_name>.md`, which contains a brief overview of the unit contents.
+In particular, it should contain a single second-level header called "Overview" with one or more paragraphs summarizing the contents of the unit.
 This will be the first item included in the `index.rst` and serves a dual purpose:
 
 1. Provides a uniform style of introduction to each unit.

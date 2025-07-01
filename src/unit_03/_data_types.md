@@ -1,4 +1,4 @@
-## Unit 02: Event and Feature Data
+## Overview
 
 This unit introduces the basics of game telemetry events, as well as how to work with this event data, which is fundamental to the OpenGameData infrastructure.
 It also introduces the terminology around "features" of gameplay, which are derived from the event data through aggregation.

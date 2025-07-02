@@ -1,8 +1,6 @@
 ## `Schema` Categories and Classes
 
-### `Config` Classes in OGD-Common Library
-
-## `Schema`
+### `Schema`
 
 This is the base class for all `Schema` and `Config` classes in Common.
 It defines the following abstract functions for all other `Schema` and `Config`s to implement:
@@ -29,6 +27,12 @@ Both the name and non-standards are accessible outside the class via properties:
 * `Name`
 * `NonStandardElements`
 * `NonStandardElementNames`
+
+### Dataset Schemas
+
+### Event Logging Schemas
+
+### Table Schemas
 
 #### `TableSchema`
 

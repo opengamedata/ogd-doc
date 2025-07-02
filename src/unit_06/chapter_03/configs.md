@@ -67,8 +67,6 @@ classDiagram
     PerCountConfig *-- SubfeatureConfig
 ```
 
-### `Config` Classes in OGD-Common Library
-
 ### Storage Config Schemas
 
 With the hierarchy separating connection from data read/write, we can also improve how configs are set up.

@@ -1,6 +1,6 @@
-************
-Installation
-************
+****************************
+SE6MEN7AT0R Auto-Coding Tool
+****************************
 
 .. include:: introduction.md
    :parser: myst_parser.sphinx_

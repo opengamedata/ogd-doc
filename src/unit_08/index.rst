@@ -10,3 +10,4 @@ Data Analysis Tools
    :caption: Data Analysis Tools
 
    chapter_01_overview/index.rst
+   chapter_02_autocoder/index.rst

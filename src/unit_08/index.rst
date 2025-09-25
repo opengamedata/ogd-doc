@@ -1,12 +1,12 @@
-#############################
-Data Analysis & Visualization
-#############################
+###################
+Data Analysis Tools
+###################
 
-.. include:: _analysis_and_viz.md
+.. include:: _analysis_tools.md
    :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 2
-   :caption: Data Analysis & Viz
+   :caption: Data Analysis Tools
 
-   chapter_01/index.rst
+   chapter_01_overview/index.rst

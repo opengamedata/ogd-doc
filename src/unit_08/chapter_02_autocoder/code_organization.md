@@ -6,11 +6,11 @@ Table of contents:
 
 - [Backend](#backend)
   - [uploads: main data folder](#uploads-main-data-folder)
-  - [DATA TAB](#data-tab)
-  - [SEGMENT TAB](#segment-tab)
-  - [LABEL TAB](#label-tab)
-  - [TRAIN TAB](#train-tab)
-  - [APPLY TAB](#apply-tab)
+  - [DATA TAB](#1-data-tab)
+  - [SEGMENT TAB](#2-segment-tab)
+  - [LABEL TAB](#3-label-tab)
+  - [TRAIN TAB](#4-train-tab)
+  - [APPLY TAB](#5-apply-tab)
 - [Frontend](#frontend)
 
 
@@ -32,7 +32,7 @@ The `flask` webserver is defined inside `main.py` with all the routes.
 3. And under `uploads/models` subdirectory, the models and preprocessors are stored (using joblib and torch).
 
 ### Detailed file structure
-**1. DATA TAB**
+#### 1. DATA TAB
 
 `dataset.py`
 - Read the dataframe
@@ -43,18 +43,18 @@ The `flask` webserver is defined inside `main.py` with all the routes.
 - Create extended description for `event_name` column
 - Filter by `event_name` column
 
-**2. SEGMENT TAB**
+#### 2. SEGMENT TAB
 
 `segment.py`
 - Manual and automatic segmenting, writing to `segment_id` column
 - Get segments list for user_id
 
-**3. LABEL TAB**
+#### 3. LABEL TAB
 
 `label.py`
 - Labels rows, writing to `segment_labels` column
 
-**4. TRAIN TAB**
+#### 4. TRAIN TAB
 
 `ogd_features.py`
 - Calculates OGD numeric features (float, int, bool)
@@ -75,7 +75,7 @@ The `flask` webserver is defined inside `main.py` with all the routes.
 `metrics.py`
 - Calculates evaluation metrics saved on training
 
-**5. APPLY TAB**
+#### 5. APPLY TAB
 
 `inference.py`
 - Loads existing models using the `*_models.json` from the `uploads` folder

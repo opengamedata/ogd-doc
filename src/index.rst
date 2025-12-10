@@ -16,6 +16,7 @@ OpenGameData Documentation
    guides/user/index.rst
    guides/extensions/index.rst
    guides/developer/index.rst
+   appendices/index.rst
    reference/index.rst
 
 ==================

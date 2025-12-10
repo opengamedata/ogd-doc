@@ -6,7 +6,7 @@ OpenGameData Developer Guide
    :maxdepth: 1
    :caption: OGD Architecture
 
-   01_core/index.rst
-   02_common/index.rst
-   03_apis/index.rst
-   04_other/index.rst
+   core/index.rst
+   common/index.rst
+   apis/index.rst
+   docs/index.rst

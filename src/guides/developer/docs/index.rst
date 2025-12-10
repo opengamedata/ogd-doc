@@ -1,18 +1,13 @@
-##########################
-Project Meta-Documentation
-##########################
+########################
+Documenting OpenGameData
+########################
 
 .. include:: _meta_documentation.md
    :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 1
-   :caption: OGD Conventions & Metadocs
+   :caption: Documenting OGD
 
-   chapter_01/index.rst
-   chapter_02/index.rst
-   chapter_03/index.rst
-   chapter_04/index.rst
-   chapter_05/index.rst
-   chapter_06/index.rst
-   appendix/index.rst
+   writing_docs/index.rst
+   ogd_metadocumentation/index.rst

@@ -9,5 +9,5 @@ OpenGameData APIs
    :maxdepth: 1
    :caption: OGD APIs
 
-   chapter_01/index.rst
+   introduction/index.rst
    appendix/index.rst

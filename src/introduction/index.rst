@@ -2,11 +2,11 @@
 Introduction to OpenGameData
 ############################
 
-.. include:: _intro.md
+.. include:: _introduction.md
    :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 1
 
-   chapter_01/index.rst
-   chapter_02/index.rst
+   welcome/index.rst
+   getting_started/index.rst

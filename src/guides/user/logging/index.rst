@@ -9,7 +9,7 @@ Data Types and Logging
    :maxdepth: 1
    :caption: Data Types and Logging
 
-   chapter_01/index.rst
-   chapter_02/index.rst
-   chapter_03/index.rst
-   chapter_04/index.rst
+   event_schema/index.rst
+   setup/index.rst
+   ogd_databases/index.rst
+   features/index.rst

@@ -9,6 +9,6 @@ Data Generators: Detectors & Extractors
    :maxdepth: 1
    :caption: Detectors & Extractors
 
-   chapter_01/index.rst
-   chapter_02/index.rst
-   chapter_03/index.rst
+   generators/index.rst
+   detectors/index.rst
+   features/index.rst

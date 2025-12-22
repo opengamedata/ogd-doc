@@ -9,5 +9,5 @@ OpenGameData Core Architecture
    :maxdepth: 1
    :caption: OGD Architecture
 
-   chapter_01/index.rst
-   chapter_02/index.rst
+   overview/index.rst
+   core/index.rst

@@ -9,5 +9,5 @@ Data Analysis Tools
    :maxdepth: 2
    :caption: Data Analysis Tools
 
-   chapter_01_overview/index.rst
-   chapter_02_autocoder/index.rst
+   overview/index.rst
+   autocoder/index.rst

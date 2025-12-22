@@ -9,7 +9,7 @@ OpenGameData Core Basics
    :maxdepth: 1
    :caption: OpenGameData Core Basics
 
-   chapter_01/index.rst
-   chapter_02/index.rst
-   chapter_03/index.rst
+   installation/index.rst
+   configuration/index.rst
+   exports/index.rst
    appendix/index.rst

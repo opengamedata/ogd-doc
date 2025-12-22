@@ -14,23 +14,23 @@ I need to...
 
 You should read the following portions of the documentation in order to retrieve a dataset:
 
-1. Start by [installing OpenGameData](../unit_02/chapter_01/index.rst).
-    * When choosing between a "Package" and "Local Source" install, you should choose the ["Package" option](../unit_02/chapter_01/index.rst#installation-as-package)
-        * autolink for the link above: <project:../unit_02/chapter_01/index.rst#installation-as-package>
+1. Start by [installing OpenGameData](../../guides/user/core/installation/index.rst).
+    * When choosing between a "Package" and "Local Source" install, you should choose the ["Package" option](../../guides/user/core/installation/index.rst#installation-as-package)
+        * autolink for the link above: <project:../../guides/user/core/installation/index.rst#installation-as-package>
 2. If the game whose data you want to retrieve has not previously been added to OpenGameData, you should instead begin with Step 2 of [integrating a new game](#integrate-a-new-game-with-opengamedata).
     * Follow the remaining steps as needed, and return to this spot.
-3. Check your [OpenGameData configuration](../unit_02/chapter_02/index.rst)
-4. Perform your [dataset export](../unit_02/chapter_03/index.rst)
+3. Check your [OpenGameData configuration](../../guides/user/core/configuration/index.rst)
+4. Perform your [dataset export](../../guides/user/core/exports/index.rst)
 
 ### Integrate a new Game with OpenGameData
 
 You should read the following portions of the documentation in order to integrate a new game with OpenGameData.:
 
-1. Start by [adding event logging](../unit_03/index.rst) to your game.  
+1. Start by [adding event logging](../../guides/user/logging/setup/index.rst) to your game.  
     * This chapter will walk you through the process of using the logging client and server to capture event data, optionally setting up a new OpenGameData data source.
-2. Next, [install OpenGameData](../unit_02/chapter_01/index.rst).
-    * When choosing between a "Package" and "Local Source" install, you should choose the ["Local Source" option](../unit_02/chapter_01/index.rst#installation-as-local-source-copy)
-3. Finally, [add a configuration](../unit_02/chapter_02/index.rst)
+2. Next, [install OpenGameData](../../guides/user/core/installation/index.rst).
+    * When choosing between a "Package" and "Local Source" install, you should choose the ["Local Source" option](../../guides/user/core/installation/index.rst#installation-as-local-source-copy)
+3. Finally, [add a configuration](../../guides/user/core/configuration/index.rst/index.rst)
 
 ### Integrate a new Data Source with OpenGameData
 

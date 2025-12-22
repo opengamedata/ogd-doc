@@ -6,9 +6,9 @@ OpenGameData User Guide
    :maxdepth: 1
    :caption: OGD Users
 
-   01_introduction/index.rst
-   02_core/index.rst
-   03_logging/index.rst
-   04_apis/index.rst
-   05_replay/index.rst
-   06_visualization/index.rst
+   introduction/index.rst
+   core/index.rst
+   logging/index.rst
+   apis/index.rst
+   replay/index.rst
+   visualization/index.rst

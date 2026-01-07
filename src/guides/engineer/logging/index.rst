@@ -9,7 +9,5 @@ Data Types and Logging
    :maxdepth: 1
    :caption: Data Types and Logging
 
-   event_schema/index.rst
    setup/index.rst
    ogd_databases/index.rst
-   features/index.rst

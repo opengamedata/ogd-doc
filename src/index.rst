@@ -12,7 +12,7 @@ OpenGameData Documentation
    :numbered: 2
    :caption: Contents:
 
-   introduction/inded.rst
+   introduction/index.rst
    guides/user/index.rst
    guides/extensions/index.rst
    guides/developer/index.rst

@@ -12,16 +12,11 @@ OpenGameData Documentation
    :numbered: 2
    :caption: Contents:
 
-   unit_01/index.rst
-   unit_02/index.rst
-   unit_03/index.rst
-   unit_04/index.rst
-   unit_05/index.rst
-   unit_06/index.rst
-   unit_07/index.rst
-   unit_08/index.rst
-   unit_09/index.rst
-
+   introduction/inded.rst
+   guides/user/index.rst
+   guides/extensions/index.rst
+   guides/developer/index.rst
+   appendices/index.rst
    reference/index.rst
 
 ==================

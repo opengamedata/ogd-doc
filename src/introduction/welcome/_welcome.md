@@ -34,14 +34,14 @@ The guides and units are as follows:
     This includes information on how to prepare for logging with your game, and ways for your team to use the collected data.
     1. [Event Logging](../../guides/producer/logging/index.rst):  
         How to identify the events that occur in your game, which can be logged with OpenGameData telemetry tools.
-* [Engineering Guide](../../guides/engineer/index.rst):
+* [Game/Data Engineering Guide](../../guides/engineer/index.rst):
     Documentation for engineers who want to use OpenGameData libraries in their projects and products.
     This includes logging integration in games, and feature extraction modules for game data.
     1. [Event Logging](../../guides/engineer/logging/index.rst):  
         How to use the OpenGameData logging libraries to log telemetry from Unity or JavaScript projects.
     2. [Detectors & Feature Engineering](../../guides/engineer/generators/index.rst):  
         How to write data Generators in OpenGameData Core to create refined analytics from raw event data.
-* [Developer Guide](../../guides/developer/index.rst):
+* [OGD Developer Guide](../../guides/developer/index.rst):
     Documentation for developers who want to work on the core OpenGameData libraries and software tools.
     1. [Core Architecture](../../guides/developer/core/index.rst):  
         A comprehensive review of the data processing architecture in OpenGameData Core, including how to integrate Core components into your own 3rd-party tool(s).

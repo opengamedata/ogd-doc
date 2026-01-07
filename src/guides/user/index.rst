@@ -7,7 +7,6 @@ OpenGameData User Guide
    :caption: OGD Users
 
    core/index.rst
-   logging/index.rst
    apis/index.rst
    replay/index.rst
    visualization/index.rst

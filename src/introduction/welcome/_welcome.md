@@ -29,10 +29,17 @@ The guides and units are as follows:
         An introduction to OpenGameData-based tools for data replay.
     5. [Data Analysis & Visualization Tools](../../guides/user/visualization/index.rst):  
         An introduction to OpenGameData-based tools for data analysis, including Jupyter Notebook templates and data dashboards.
+* [Game Producer Guide](../../guides/producer/index.rst):
+    Documentation for game producers who want to use OpenGameData as a telemetry logging and analytics solution.
+    This includes information on how to prepare for logging with your game, and ways for your team to use the collected data.
+    1. [Event Logging](../../guides/producer/logging/index.rst):  
+        How to identify the events that occur in your game, which can be logged with OpenGameData telemetry tools.
 * [Engineering Guide](../../guides/engineer/index.rst):
     Documentation for engineers who want to use OpenGameData libraries in their projects and products.
     This includes logging integration in games, and feature extraction modules for game data.
-    1. [Detectors & Feature Engineering](../../guides/engineer/generators/index.rst):  
+    1. [Event Logging](../../guides/engineer/logging/index.rst):  
+        How to use the OpenGameData logging libraries to log telemetry from Unity or JavaScript projects.
+    2. [Detectors & Feature Engineering](../../guides/engineer/generators/index.rst):  
         How to write data Generators in OpenGameData Core to create refined analytics from raw event data.
 * [Developer Guide](../../guides/developer/index.rst):
     Documentation for developers who want to work on the core OpenGameData libraries and software tools.

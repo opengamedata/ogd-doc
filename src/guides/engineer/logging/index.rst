@@ -10,4 +10,5 @@ Data Types and Logging
    :caption: Data Types and Logging
 
    setup/index.rst
+   event_schema/index.rst
    ogd_databases/index.rst

@@ -16,7 +16,7 @@ OpenGameData Documentation
    guides/user/index.rst
    guides/producer/index.rst
    guides/engineer/index.rst
-   guides/developer/index.rst
+   guides/maintainer/index.rst
    appendices/index.rst
    reference/index.rst
 

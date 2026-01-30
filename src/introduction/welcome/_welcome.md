@@ -41,15 +41,15 @@ The guides and units are as follows:
         How to use the OpenGameData logging libraries to log telemetry from Unity or JavaScript projects.
     2. [Detectors & Feature Engineering](../../guides/engineer/generators/index.rst):  
         How to write data Generators in OpenGameData Core to create refined analytics from raw event data.
-* [OGD Developer Guide](../../guides/developer/index.rst):
+* [OGD Developer Guide](../../guides/maintainer/index.rst):
     Documentation for developers who want to work on the core OpenGameData libraries and software tools.
-    1. [Core Architecture](../../guides/developer/core/index.rst):  
+    1. [Core Architecture](../../guides/maintainer/core/index.rst):  
         A comprehensive review of the data processing architecture in OpenGameData Core, including how to integrate Core components into your own 3rd-party tool(s).
-    2. [OGD ``Common'' Library](../../guides/developer/common/index.rst):  
+    2. [OGD ``Common'' Library](../../guides/maintainer/common/index.rst):  
         A comprehensive review of the library containing base classes and other utilities used across multiple parts of the OGD software ecosystem.
-    3. [OpenGameData Web APIs](../../guides/developer/apis/index.rst):  
+    3. [OpenGameData Web APIs](../../guides/maintainer/apis/index.rst):  
         Documentation of the OpenGameData Web APIs for data storage and access.
-    4. [Meta-Documentation](../../guides/developer/docs/index.rst):  
+    4. [Meta-Documentation](../../guides/maintainer/docs/index.rst):  
         Documentation for contributors working on core OGD infrastructure and documentation, covering topics such as coding conventions and our software reference platform.
 * [Core API Reference](../reference/index.rst):  
     API reference for the OpenGameData Core Python package.

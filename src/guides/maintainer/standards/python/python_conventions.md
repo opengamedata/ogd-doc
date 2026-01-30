@@ -1,11 +1,8 @@
 ## Coding Conventions
 
-A summary of a few conventions used throughout the various OGD codebases:
-
-A few notes:  
+A summary of a conventions used throughout the various OGD Python codebases:
 
 - None of these are really *mandatory* in any sense, but they do help keep things consistent and organized.
-- Most of the codebase(s) are written in Python, so most of these conventions are Python-focused.
 
 ### Software Platform
 
@@ -137,17 +134,11 @@ For easy copy-paste of section comments:
 
 ```python
 # import standard libraries
-```
 
-```python
 # import 3rd-party libraries
-```
 
-```python
 # import OGD libraries
-```
 
-```python
 # import local files
 ```
 
@@ -178,28 +169,16 @@ For easy copy-paste of section comment headers:
 
 ```python
 # *** ABSTRACTS ***
-```
 
-```python
 # *** BUILT-INS & PROPERTIES ***
-```
 
-```python
 # *** IMPLEMENT ABSTRACT FUNCTIONS ***
-```
 
-```python
 # *** PUBLIC STATICS ***
-```
 
-```python
 # *** PUBLIC METHODS ***
-```
 
-```python
 # *** PRIVATE STATICS ***
-```
 
-```python
 # *** PRIVATE METHODS ***
 ```

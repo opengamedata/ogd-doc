@@ -2,11 +2,15 @@
 Coding Conventions & Tips
 *************************
 
-.. include:: ./_coding_conventions.md
+.. include:: ./_standards.md
    :parser: myst_parser.sphinx_
 
-.. include:: ./python_conventions.md
-   :parser: myst_parser.sphinx_
+.. toctree::
+   :maxdepth: 1
+   :caption: OpenGameData Standards
 
-.. include:: ./python_tips.md
-   :parser: myst_parser.sphinx_
+   platform/index.rst
+   project_conventions/index.rst
+   python/index.rst
+   testing/index.rst
+   github/index.rst

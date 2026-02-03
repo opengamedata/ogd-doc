@@ -1,6 +1,4 @@
-## GitHub Actions Conventions
-
-### Workflow Naming
+## Workflow Naming
 
 The naming convention for workflow files is to use an all-caps prefix indicating the general function of the workflow, joined by an underscore to a specific workflow name.
 
@@ -14,7 +12,7 @@ Generally, a `DEPLOY` or `CI` script's name will simply reflect the name of the 
 A `TEST` script's name should reflect the specific component checked by the testbed; for example, `TEST_api-response.yml`.
 Then the general form is `TEST_<component-name>.yml`
 
-#### Human-Readable Workflow Names
+### Human-Readable Workflow Names
 
 Within the workflow file, each workflow should use the `name` and `run-name` settings to create human-readable titles for the workflow runs as displayed in GitHub.
 The general format for each is as follows:

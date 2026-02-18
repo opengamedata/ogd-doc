@@ -1,27 +1,129 @@
-### Workflow Naming
+## Testing Structure for Python Projects
 
-The naming convention for workflow files is to use an all-caps prefix indicating the general function of the workflow, joined by an underscore to a specific workflow name.
+We use Python's built-in `unittest` library as our testing framework, as it gives us:
 
-Typical prefixes include:
+* Straightforward compatibility with base Python
+* Clear class and function structures for organizing tests
 
-* `DEPLOY` : A script to deploy the project to a server or distribution site
-* `CI` : A high-level script to run tests on a given development branch
-* `TEST` : A "reusable workflow" script to run a specific testbed, which is typically called from a CI script (but may also run independently)
+In general, the structures we have to use for organizing our tests are as follows:
 
-Generally, a `DEPLOY` or `CI` script's name will simply reflect the name of the project, for a name of the form `DEPLOY_<project-name>.yml` or `CI_<project-name>.yml`.
-A `TEST` script's name should reflect the specific component checked by the testbed; for example, `TEST_api-response.yml`.
-Then the general form is `TEST_<component-name>.yml`
+1. Folders & Files
+2. `unittest` Classes (`TestBed` and `TestCase`)
+3. Individual Test Methods
 
-#### Human-Readable Workflow Names
+The rest of this section describes how we use map various Python/project entities to those testing structures.
 
-Within the workflow file, each workflow should use the `name` and `run-name` settings to create human-readable titles for the workflow runs as displayed in GitHub.
-The general format for each is as follows:
+### Folder & File Structure
 
-1. `name: <Project Title> - <Workflow Function> Script`  
-  For the base human-readable name, we use a dash separation between a project title and a title for the script itself.
-  The script title here should be a brief title, followed by the word "Script."  
-  Full example: `name: OGD Website - Release Script`
-2. `run-name: ${{ format('{0} - {1}', github.workflow, github.event_name == 'push' && github.event.ref || 'Manual Run') }}`  
-  For the human-readable title of the specific workflow run, we effectively append another dash-separated portion onto the base name.
-  This will be either the GitHub "ref" if the workflow was triggered "normally," e.g. by a push, or the string 'Manual Run' if the workflow was manually triggered.
-  Alternately, if there are multiple automatic triggers, the second parameter could theoretically be modified to `github.event_name == 'workflow_trigger' && 'Manual Run' || github.event.ref`.
+Every project has a `src` folder containing the direct source code for the project, and a `tests` folder housing tests of that source code.
+
+Within `src`, our projects typically group Python code into a few folder levels, typically in accordance with inheritance trees.
+Folders under `tests` should approximately mirror the folders under `src`.
+For example, the `src` folder structure of `ogd-common` looks something like:
+
+```md
+- src
+  - ogd
+    - commmon
+      - configs
+      - filters
+      - models
+      - schemas
+      - storage
+        - connectors
+        - interfaces
+        - outerfaces
+      (etc.)
+```
+
+Then the folder structure for `tests` should have an identical structure, for ease of navigation; the exception is that we can omit the "singleton" folders that exist only for namespacing in the Python package:
+
+```md
+- tests
+  - configs
+  - filters
+  - models
+  - schemas
+  - storage
+    - connectors
+    - interfaces
+    - outerfaces
+  (etc.)
+```
+
+The standards for file and folder structure _within_ this mirrored structure will be developed further in the remaining sections.
+
+### `unittest` Classes
+
+The two major classes we can use for testing within the Python `unittest` framework are `TestSuite` and `TestCase`.
+
+The `unittest` framework is apparently based on the [Beck Testing Framework](https://web.archive.org/web/20150315073817/http://www.xprogramming.com/testfram.htm), which broadly defines terms **Test Fixture** as a single configuration of a software module, and **Test Case** as a "stimulus" of a **Fixture**.
+Beck conceptualizes a `TestCase` class, which is subclassed for each **Fixture** one wishes to test.
+The **Test Fixture** is implemented by setting instance variables (roughly equivalent to a constructor), and each **Test Case** stimulus is implemented as a method of the `TestCase` subclass (with one or more **Checks** at the end of the method).
+
+In `unittest`, then, we use `TestCase` subclasses to create **Fixtures**, and functions within the subclasses to implement **Cases**.
+Then we use `TestSuite` to collect together multiple `TestCase`s.
+
+Officially, the individual Python module is our unit of analysis for creating a collection of tests, which we group together with `TestSuite`.
+However, in Python, each file is a module, and by convention, we usually put a single class in each file.
+Thus, we can _usually_ go about testing as if we were creating a `TestSuite` for each class, though for the sake of technical correctness we'll use the word "module."
+In the rare case that we slip a "helper" class into the same file as another, "main" class (which will share the file's name), we still use a single `TestSuite`, but give the "helper" class its own `TestCase`s.
+
+Since there are multiple parts to the full test collection for each module, we'll split the parts across files.
+The `TestSuite` definition should go in its own file, and each `TestCase` should have its own file as well, subject to the exception in the section below.
+We store all these in a folder with the same name as the module being tested.
+Thus, each module (`.py` file) in the folder structure of `src` will correspond to a _folder_ in the structure of `tests`.
+
+#### Complexities of Testing Complex Classes
+
+This is all a fairly straightforward use of `unittest`, similar to what you'd find in any tutorial or intro walkthrough.
+However, for a large codebase (or set of codebases), there are inevitably more complex cases that arise.
+In particular, we've faced the issue where many test-worthy configurations of a class share what feels like 99% similarity with most of the other configurations, 99% similarity in what tests to run, but the 1% difference requires them to be different cases.
+
+For example, consider one of the `Config` subclasses in `ogd-common`.
+These each track various properties for configuration of some other class.
+Some of these properties are optional, and all are meant to have some meaningful default value.
+They are meant to be loadable from a variety of sources, and there is complex parsing logic to support this variety of source loading.
+Typically, then, we would want to test loading similar data and checking for similar results, but never quite the _same_ results.
+
+Our solution to this will be to insert an intermediate class between our "true" **Test Fixture** classes and the `TestCase` base class.
+This intermediate class would implement the `SetUp` function to prepare a "base" **Fixture**, and then the true **Test Fixture** implementation will use the `SetUp` function to call the `super` version, before making whatever small tweak is needed to prepare the fixture.
+
+In this way, we don't need excessive copy-pasting of **Fixture** preparation between very similar `TestCase` classes.
+We will make these abstract, general descriptions of approach a more concrete treatment in the final section of this outline.
+
+#### Naming Conventions
+
+Now, we said each module gets a single `TestSuite` collecting all the `TestCase`s for that module.  
+The `TestSuite` subclass should have a name with the format `<ModuleName>Suite`.  
+Each `TestCase` subclass should have a name that describes the **Fixture** it implements, followed by the word "Case."
+For example, if the **Fixture** is testing the class with all default values, the `TestCase` subclass could be `DefaultCase`.
+If the **Fixture** is testing the class with a configuration for, say, a specific game (say Aqualab), then the subclass could be `AqualabCase` or similar.
+
+In cases where we have an intermediate base class for a set of **Cases**, the "decription" part of the name should be a reasonable summary of the commonality between the **Cases**, and end in the word "Cases."
+For example, if we have a collection of **Cases** related to using slight variations of configurations for different games, the base class could be `GameConfigCases`, and the "true" **Fixture** classes might be `AqualabCase`, `AstroCase`, etc.
+
+Finally, the folder containing the `TestSuite` and `TestCase`s should the name of the module being tested by those classes.
+
+### Individual Test Methods
+
+Each test method in a `TestCase` subclass should represent a single call of a method of the class being tested, followed by as many **Checks** of the state of the class instance as needed to assure a correct result.
+This means we don't, for example, call a function, check the result, and call another following function for further checks.
+
+The name of each test method should have a prefix `test_`, and the remainder of the name should describe the **Stimulus** (i.e. which method we're calling), and something about the expected outcome.
+
+For example, if we're writing an API test for requesting info on a game that does not exist, the full method name might be `test_get_game_not_exists`.
+Note that, due to a strong existing convention with the `unittest` framework, we break from our standard function naming conventions and use snake_case instead of pascalCase or CamelCase.
+
+### Full Outline of Python Testing Structure
+
+Compiling the discussions of the three different levels of testing structure and convention, we can finally summarize our Python testing standard:
+
+* We use `unittest` for testing.
+* The folder structure of `tests` should mirror `src`, except for "singleton" folders (folders that exist alone inside the parent folder) that exist only for package namespacing.
+* Each Python module (i.e. each `.py` file) should have its own folder in the structure, containing:
+  * `<ModuleName>Suite.py`, containing a `TestSuite` subclass that collects all the `TestCase`s from the folder.
+  * `<CaseName>Case.py` files for each **Fixture** being tested, containing a `TestCase` subclass.
+  * `<GroupName>Cases.py` files for each case where multiple closely-related **Fixtures** are implemented as a group under a common `TestCase` subclass.
+* Each individual `TestCase` subclass should implement one test function per **Stimulus** of the **Fixture**, with as many **Checks** as needed. In other words, there should _not_ be individual test functions that each call the same method in the same way only to run a slightly different assert on the result.
+* Test functions should have names formatted like `test_<description_of_test>`.

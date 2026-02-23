@@ -16,9 +16,25 @@ The rest of this section describes how we use map various Python/project entitie
 ### Folder & File Structure
 
 Every project has a `src` folder containing the direct source code for the project, and a `tests` folder housing tests of that source code.
+The `tests` folder should in turn have a standard set of subfolders:
+
+```md
+- tests
+  - cases
+  - config
+  - data (optional)
+```
+
+* The `cases` folder contains all the code for individual test cases, test suites, etc.
+* The `config` folder contains any configuration for the test harness, including any classes for configuring the tests.
+For example, the an API project may have a custom configuration to set the API base URL for remote tests.
+Both the config itself, and any custom class definitions (e.g. an `APIConfig.py` file), belong in `config`.
+* The `data` folder is optional, and is the place to store any data loaded by the tests themselves.  
+**Note**: in the case where we are writing tests for configuration classes, any config files loaded for the sake of testing belong in the `data` folder;
+the `config` folder is reserved for configuration of the test harness itself.
 
 Within `src`, our projects typically group Python code into a few folder levels, typically in accordance with inheritance trees.
-Folders under `tests` should approximately mirror the folders under `src`.
+Folders under `cases` should approximately mirror the folders under `src`.
 For example, the `src` folder structure of `ogd-common` looks something like:
 
 ```md
@@ -33,22 +49,25 @@ For example, the `src` folder structure of `ogd-common` looks something like:
         - connectors
         - interfaces
         - outerfaces
-      (etc.)
+      - ... etc.
 ```
 
-Then the folder structure for `tests` should have an identical structure, for ease of navigation; the exception is that we can omit the "singleton" folders that exist only for namespacing in the Python package:
+Then the folder structure for `cases` should have an identical structure, for ease of navigation; the exception is that we can omit the "singleton" folders that exist only for namespacing in the Python package:
 
 ```md
 - tests
-  - configs
-  - filters
-  - models
-  - schemas
-  - storage
-    - connectors
-    - interfaces
-    - outerfaces
-  (etc.)
+  - cases
+    - configs
+    - filters
+    - models
+    - schemas
+    - storage
+      - connectors
+      - interfaces
+      - outerfaces
+    - ... etc.
+  - config
+  - data
 ```
 
 The standards for file and folder structure _within_ this mirrored structure will be developed further in the remaining sections.
@@ -120,8 +139,9 @@ Note that, due to a strong existing convention with the `unittest` framework, we
 Compiling the discussions of the three different levels of testing structure and convention, we can finally summarize our Python testing standard:
 
 * We use `unittest` for testing.
-* The folder structure of `tests` should mirror `src`, except for "singleton" folders (folders that exist alone inside the parent folder) that exist only for package namespacing.
-* Each Python module (i.e. each `.py` file) should have its own folder in the structure, containing:
+* The `tests` folder should include subfolders for `cases` and `config`.
+* The folder structure of `tests/cases` should mirror `src`, except for "singleton" folders (folders that exist alone inside the parent folder) that exist only for package namespacing.
+* Each Python module (i.e. each `.py` file) should have its own subfolder in the structure, containing:
   * `<ModuleName>Suite.py`, containing a `TestSuite` subclass that collects all the `TestCase`s from the folder.
   * `<CaseName>Case.py` files for each **Fixture** being tested, containing a `TestCase` subclass.
   * `<GroupName>Cases.py` files for each case where multiple closely-related **Fixtures** are implemented as a group under a common `TestCase` subclass.

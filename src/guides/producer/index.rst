@@ -1,9 +1,9 @@
-################################
-OpenGameData Game Producer Guide
-################################
+###################
+Game Producer Guide
+###################
 
 .. toctree::
    :maxdepth: 1
-   :caption: OGD Feature Engineering & Extensions
+   :caption: OGD Game Producer Guide
 
    logging/index.rst

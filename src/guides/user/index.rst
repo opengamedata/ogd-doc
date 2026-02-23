@@ -1,10 +1,10 @@
-#######################
-OpenGameData User Guide
-#######################
+##########
+User Guide
+##########
 
 .. toctree::
    :maxdepth: 1
-   :caption: OGD Users
+   :caption: OpenGameData User Guide
 
    core/index.rst
    apis/index.rst

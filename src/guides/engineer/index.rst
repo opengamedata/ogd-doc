@@ -1,6 +1,6 @@
-###################################################
-OpenGameData Feature Engineering & Extensions Guide
-###################################################
+######################################
+Feature Engineering & Extensions Guide
+######################################
 
 .. toctree::
    :maxdepth: 1

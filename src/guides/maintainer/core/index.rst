@@ -11,3 +11,4 @@ OpenGameData Core Architecture
 
    overview/index.rst
    core/index.rst
+   modeling/index.rst

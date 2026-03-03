@@ -82,18 +82,9 @@ The **Test Fixture** is implemented by setting instance variables (roughly equiv
 
 In `unittest`, then, we use `TestCase` subclasses to create **Fixtures**, and functions within the subclasses to implement **Cases**.
 Then we use `TestSuite` to collect together multiple `TestCase`s.
+The `unittest` framework provides reasonable test discovery features to generate a `TestSuite` for us, so we use those features instead of hardcoding a suite directly.
 
-Officially, the individual Python module is our unit of analysis for creating a collection of tests, which we group together with `TestSuite`.
-However, in Python, each file is a module, and by convention, we usually put a single class in each file.
-Thus, we can _usually_ go about testing as if we were creating a `TestSuite` for each class, though for the sake of technical correctness we'll use the word "module."
-In the rare case that we slip a "helper" class into the same file as another, "main" class (which will share the file's name), we still use a single `TestSuite`, but give the "helper" class its own `TestCase`s.
-
-Since there are multiple parts to the full test collection for each module, we'll split the parts across files.
-The `TestSuite` definition should go in its own file, and each `TestCase` should have its own file as well, subject to the exception in the section below.
-We store all these in a folder with the same name as the module being tested.
-Thus, each module (`.py` file) in the folder structure of `src` will correspond to a _folder_ in the structure of `tests`.
-
-#### Complexities of Testing Complex Classes
+#### Complexities of Testing Complicated Classes
 
 This is all a fairly straightforward use of `unittest`, similar to what you'd find in any tutorial or intro walkthrough.
 However, for a large codebase (or set of codebases), there are inevitably more complex cases that arise.
@@ -142,8 +133,28 @@ Compiling the discussions of the three different levels of testing structure and
 * The `tests` folder should include subfolders for `cases` and `config`.
 * The folder structure of `tests/cases` should mirror `src`, except for "singleton" folders (folders that exist alone inside the parent folder) that exist only for package namespacing.
 * Each Python module (i.e. each `.py` file) should have its own subfolder in the structure, containing:
-  * `<ModuleName>Suite.py`, containing a `TestSuite` subclass that collects all the `TestCase`s from the folder.
   * `<CaseName>Case.py` files for each **Fixture** being tested, containing a `TestCase` subclass.
   * `<GroupName>Cases.py` files for each case where multiple closely-related **Fixtures** are implemented as a group under a common `TestCase` subclass.
 * Each individual `TestCase` subclass should implement one test function per **Stimulus** of the **Fixture**, with as many **Checks** as needed. In other words, there should _not_ be individual test functions that each call the same method in the same way only to run a slightly different assert on the result.
 * Test functions should have names formatted like `test_<description_of_test>`.
+
+## Running Tests
+
+When running locally, executing tests typically takes the form of running the following from the project root directory:
+
+```bash
+python -m unittest discover -t "./" -s "./tests/cases/<path>/<to>/<module_tests>/" -p "*Case.py"
+```
+
+Here, `-t` is used to indicate the top-level folder of the project (change as needed if running from a directory other than the top-levelfolder itself), `-s` is used to indicate the specific directory in which to search for tests, and `-p` is a pattern for selecting files in the directory to search. In this way, you can run the tests for any module in the project.
+
+FOr a concrete example, consider the `DataTableConfig` class in `ogd-core`. In this case, the appropriate command, run from the `ogd-core/` base folder, is:
+
+```bash
+python -m unittest discover -t "./" -s "./tests/cases/configs/DataTableConfig/" -p "*Case.py"
+```
+
+Most IDEs have some form of built-in test explorer.
+Refer to the documentation for your IDE of choice to determine how to configure the test discovery features of the built-in test explorer, if it exists.
+In Visual Studio Code, it is usually sufficient to ensure the Python language extension is installed and active.
+We use `unittest` test discovery in our GitHub automations to run tests as needed.

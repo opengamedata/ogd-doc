@@ -138,6 +138,77 @@ Compiling the discussions of the three different levels of testing structure and
 * Each individual `TestCase` subclass should implement one test function per **Stimulus** of the **Fixture**, with as many **Checks** as needed. In other words, there should _not_ be individual test functions that each call the same method in the same way only to run a slightly different assert on the result.
 * Test functions should have names formatted like `test_<description_of_test>`.
 
+### Typical Structure of a `TestCase` subclass
+
+The following example demonstrates, with inline notes in the comments, a typical structuring of the file containing a single `TestCase` subclass.
+
+```python
+# import standard libraries
+import unittest
+from unittest import TestCase
+# import OGD library modules as needed, e.g. to set up logging
+from ogd.common.configs.TestConfig import TestConfig
+from ogd.common.utils.Logger import Logger
+# import the module being tested, through src.path.to.module.
+# this ensures the test looks for the local file and not any installed copy.
+from src.ogd.core.configs.generators.ExtractorConfig import ExtractorConfig
+# import local test config
+from tests.config.t_config import settings
+
+def setUpModule():
+    """Use setUpModule to initialize anything outside of the class, typically test configuration.
+    """
+    cfg   = TestConfig.FromDict(name="SchemaTestConfig", unparsed_elements=settings)
+    level = logging.DEBUG if cfg.Verbose else logging.INFO
+    Logger.std_logger.setLevel(level)
+
+class BasicInitCase(TestCase):
+    """Describe the test case broadly. In this case, we have a simple, hardcoded set of initialization params.
+    
+    Fixture:
+    * Specify details of the test fixture captured by this case.
+    
+    Case Categories:
+    * List the broad categories of test cases here. e.g. "Properties," "API request functions," etc. Include a one-sentence explanation of each.
+    """
+
+    @classmethod
+    def setUp(self) -> None:
+        """Set up the test fixture.
+        """
+        elems = {
+            "threshold": 30,
+            "enabled": True,
+            "type": "ActiveTime",
+            "description": "Active time of a player",
+            "return_type": "timedelta",
+            "subfeatures": {
+                "Seconds": {
+                    "description": "The number of seconds of active time.",
+                    "return_type": "int"
+                }
+            }
+        }
+        self.instance = ExtractorConfig(
+            name="ExampleConfig",
+            unparsed_elements=elems
+        )
+
+    # *** Write individual test functions ***
+
+    def test_Name(self):
+        _str = self.test_schema.Name
+        self.assertIsInstance(_str, str)
+        self.assertEqual(_str, "ExampleConfig")
+
+    def test_TypeName(self):
+        _str = self.test_schema.TypeName
+        self.assertIsInstance(_str, str)
+        self.assertEqual(_str, "ActiveTime")
+    
+    # etc.
+```
+
 ## Running Tests
 
 When running locally, executing tests typically takes the form of running the following from the project root directory:

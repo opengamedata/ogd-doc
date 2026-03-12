@@ -70,6 +70,8 @@ Then the folder structure for `cases` should have an identical structure, for ea
   - data
 ```
 
+NOTE: If the `data` folder is in use, it should use this same mirrored folder substructure as `cases`.
+
 The standards for file and folder structure _within_ this mirrored structure will be developed further in the remaining sections.
 For the TL;DR version, jump straight to [Full Outline of Python Testing Structure](#full-outline-of-python-testing-structure)
 
@@ -145,6 +147,7 @@ Compiling the discussions of the three different levels of testing structure and
 * We use `unittest` for testing.
 * The `tests` folder should include subfolders for `cases` and `config`.
 * The folder structure of `tests/cases` should mirror `src`, except for "singleton" folders (folders that exist alone inside the parent folder) that exist only for package namespacing.
+* The `tests` folder *may* include a subfolder for `data`, which should mirror `src` in the same way as `cases`.
 * Each Python module (i.e. each `.py` file) should have its own subfolder in the structure, called `<ModuleName>Suite`, containing:
   * `<CaseName>Case.py` files for each **Fixture** being tested, containing a `TestCase` subclass.
   * `<GroupName>Cases.py` files wherever multiple closely-related **Fixtures** are implemented as a group under a common `TestCase` subclass.

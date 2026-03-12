@@ -71,6 +71,7 @@ Then the folder structure for `cases` should have an identical structure, for ea
 ```
 
 The standards for file and folder structure _within_ this mirrored structure will be developed further in the remaining sections.
+For the TL;DR version, jump straight to [Full Outline of Python Testing Structure](#full-outline-of-python-testing-structure)
 
 ### `unittest` Classes
 
@@ -83,6 +84,8 @@ The **Test Fixture** is implemented by setting instance variables (roughly equiv
 In `unittest`, then, we use `TestCase` subclasses to create **Fixtures**, and functions within the subclasses to implement **Cases**.
 Then we use `TestSuite` to collect together multiple `TestCase`s.
 The `unittest` framework provides reasonable test discovery features to generate a `TestSuite` for us, so we use those features instead of hardcoding a suite directly.
+In practice, then, we create a series of `TestCase` subclasses for each class or standalone module in the project.
+Each class/module's collection of `TestCase` subclasses goes in a single subfolder of the structure outlined above, and test discovery can be pointed at the folder to find the `TestCase`s.
 
 #### Complexities of Testing Complicated Classes
 
@@ -104,8 +107,9 @@ We will make these abstract, general descriptions of approach a more concrete tr
 
 #### Naming Conventions
 
-Now, we said each module gets a single `TestSuite` collecting all the `TestCase`s for that module.  
-The `TestSuite` subclass should have a name with the format `<ModuleName>Suite`.  
+The folder containing all `TestCase` subclasses for a given class or module of the project should have a format like `<ModuleName>Suite`.
+That is, it should have the name of the module, followed by the word "Suite."
+
 Each `TestCase` subclass should have a name that describes the **Fixture** it implements, followed by the word "Case."
 For example, if the **Fixture** is testing the class with all default values, the `TestCase` subclass could be `DefaultCase`.
 If the **Fixture** is testing the class with a configuration for, say, a specific game (say Aqualab), then the subclass could be `AqualabCase` or similar.
@@ -113,7 +117,16 @@ If the **Fixture** is testing the class with a configuration for, say, a specifi
 In cases where we have an intermediate base class for a set of **Cases**, the "decription" part of the name should be a reasonable summary of the commonality between the **Cases**, and end in the word "Cases."
 For example, if we have a collection of **Cases** related to using slight variations of configurations for different games, the base class could be `GameConfigCases`, and the "true" **Fixture** classes might be `AqualabCase`, `AstroCase`, etc.
 
-Finally, the folder containing the `TestSuite` and `TestCase`s should the name of the module being tested by those classes.
+#### Common Cases
+
+There are a few basic **Fixtures** that appear quite frequently in our test suites, which we outline below:
+
+* `BasicInitCase` : Very common **fixture** for config/schema-related classes. In this case, we provide a very basic, non-specific set of args to the class, and use them to test Properties and other "getter"-style functions.
+* `EmptyCase`: A **fixture** in which no instance of the class is initialized. Used to test initialization functions, such as functions to create an instance from a loaded file.
+* `StaticCase`: Related to the `EmptyCase`, this is a sort of non-**fixture** used for standalone modules that only contain functions, or utility classes with only static methods.
+    * The `StaticCase` has a special violation of normal conventions.
+      We create a `StaticCase.py` file, but instead of placing a single `StaticCase` class within, we create multiple `<FunctionName>Case` classes, each dedicated to testing a single function of the module (or class).
+* `DefaultCase` : A **fixture** in which we initialize an instance only with class defaults, i.e. with an empty constructor call or with a call to a `.Default()` function.
 
 ### Individual Test Methods
 
@@ -132,9 +145,9 @@ Compiling the discussions of the three different levels of testing structure and
 * We use `unittest` for testing.
 * The `tests` folder should include subfolders for `cases` and `config`.
 * The folder structure of `tests/cases` should mirror `src`, except for "singleton" folders (folders that exist alone inside the parent folder) that exist only for package namespacing.
-* Each Python module (i.e. each `.py` file) should have its own subfolder in the structure, containing:
+* Each Python module (i.e. each `.py` file) should have its own subfolder in the structure, called `<ModuleName>Suite`, containing:
   * `<CaseName>Case.py` files for each **Fixture** being tested, containing a `TestCase` subclass.
-  * `<GroupName>Cases.py` files for each case where multiple closely-related **Fixtures** are implemented as a group under a common `TestCase` subclass.
+  * `<GroupName>Cases.py` files wherever multiple closely-related **Fixtures** are implemented as a group under a common `TestCase` subclass.
 * Each individual `TestCase` subclass should implement one test function per **Stimulus** of the **Fixture**, with as many **Checks** as needed. In other words, there should _not_ be individual test functions that each call the same method in the same way only to run a slightly different assert on the result.
 * Test functions should have names formatted like `test_<description_of_test>`.
 

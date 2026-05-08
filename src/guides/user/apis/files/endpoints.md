@@ -20,7 +20,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games
   ```
 
   ```json
@@ -39,7 +39,7 @@ These are considered deprecated, and will be removed in a future version of the 
 
   Example:
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/AQUALAB
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB
   ```
 
   ```json
@@ -62,7 +62,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/details
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/details
   ```
 
   ```json
@@ -99,7 +99,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/AQUALAB/datasets
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets
   ```
 
   ```json
@@ -126,7 +126,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/AQUALAB/datasets/2023
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets/2023
   ```
 
   ```json
@@ -152,7 +152,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/AQUALAB/datasets/2023/01
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets/2023/01
   ```
 
 * `/games/<game_id>/datasets/<year>/<month>/manifest` (experimental)
@@ -162,7 +162,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/AQUALAB/datasets/2023/01/manifest
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets/2023/01/manifest
   ```
 
 #### File-Level Endpoints
@@ -179,7 +179,7 @@ These are considered deprecated, and will be removed in a future version of the 
   Example:
 
   ```bash
-  curl https://ogd-staging.fielddaylab.wisc.edu/apis/files/main/games/AQUALAB/datasets/2023/01/player
+  curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets/2023/01/player
   ```
 
 #### Legacy Endpoints

@@ -19,4 +19,4 @@ To access an API endpoint with your browser, simply perform the following steps:
     You could type it in to the browser's address bar directly, or paste it from somewhere else.
     The result should be a very simple display of some JSON-structured data, corresponding to your request:
 
-    ![The results of an example API request displayed in the Chromium web browser (with pretty-printing enabled)](../../../../assets/images/figures/api-in-browser.png)
+    ![The results of an example API request displayed in the Chromium web browser (with pretty-printing enabled)](/assets/images/figures/api-in-browser.png)

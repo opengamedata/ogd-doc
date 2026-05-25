@@ -283,3 +283,23 @@ class SQL:
         return result
 ```
 
+## Two-entry "Database Changelog"
+
+Following on from the SQL class, another ancient bit of code/documentation that got cleaned out for the `ogd-common` 2.0 series:
+
+```md
+## Global Database Changelog
+
+### August 2019
+
+- Added remote_addr field to raw csv
+- Duplicated events may exist in data prior to August 21, 2019.
+```
+
+This was our "database changelog" that was intended to record changes we made to the structure of OGD event data and the database containing it.
+The intent was to add entries whenever we made significant changes, and I guess this started at the end of the first summer of development of what eventually became `ogd-core`.
+We tweaked what fields were included where, and noted that some sort of bug prior to that time allowed duplicate events to be logged.
+Then we never touched the file again, despite many more refinements over the years.
+
+This little bit of Markdown was quietly tacked on to the readme of every database export since then, even though it was not useful in practice anymore.
+We finally retired it, and the code that pulled it in for readme inclusion, just shy of seven years later in the early summer of '26.

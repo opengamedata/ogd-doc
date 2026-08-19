@@ -1,3 +1,3 @@
-## Appendix Overview
+## Appendices Overview
 
-This appendix includes a guide for contributing to OpenGameData, and a general glossary of terms.
+These appendices include the official OGD Event Standard, a guide for contributing to OpenGameData, and a general glossary of terms.

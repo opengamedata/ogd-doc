@@ -1,6 +1,6 @@
-**************************
-Appendix A: Event Standard
-**************************
+**************
+Event Standard
+**************
 
 .. include:: ../../../standards/events/0001_introduction.md
    :parser: myst_parser.sphinx_

@@ -1,12 +1,14 @@
-********
-Appendix
-********
+##########
+Appendices
+##########
 
 .. include:: _appendix.md
    :parser: myst_parser.sphinx_
 
-.. include:: contributing.md
-   :parser: myst_parser.sphinx_
+.. toctree::
+   :maxdepth: 1
+   :caption: Appendices
 
-.. include:: glossary.md
-   :parser: myst_parser.sphinx_
+   event_standard/index.rst
+   contributing/index.rst
+   glossary/index.rst

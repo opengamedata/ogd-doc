@@ -7,3 +7,6 @@
 [submodule "opengamedata-meta"]
 	path = opengamedata-meta
 	url = https://github.com/opengamedata/.github.git
+[submodule "standards"]
+	path = standards
+	url = git@github.com:opengamedata/ogd-standards.git

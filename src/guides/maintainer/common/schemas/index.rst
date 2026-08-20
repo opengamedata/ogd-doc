@@ -5,7 +5,7 @@ Schemas and Configs
 OpenGameData uses a complex web of `Schema` subclasses to manage configuration of systems,
 as well as documentation of features and data.
 
-.. include:: ./_schemas.md
+.. include:: ./overview.md
    :parser: myst_parser.sphinx_
 
 .. include:: ./configs.md

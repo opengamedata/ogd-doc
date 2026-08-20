@@ -5,7 +5,7 @@ Data Connectors, Interfaces, & Outerfaces
 OpenGameData uses classes called ``connectors`` to aid in loading input data and writing output data.
 Specific ``connector`` subclasses, called ``interface``s, perform **in**put, and subclasses called ``outerface``s perform **out**put.
 
-.. include:: ./_connectors.md
+.. include:: ./class_hierarchies.md
    :parser: myst_parser.sphinx_
 
 .. include:: ./storage_connectors.md

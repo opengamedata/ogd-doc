@@ -2,8 +2,8 @@
 Hosting an OpenGameData Instance
 ################################
 
-.. include:: _hosting.md
-   :parser: myst_parser.sphinx_
+This unit describes how your organization can self-host instances of the various OpenGameData services.
+In particular, we'll focus on how to host your own database and file server for collecting and distributing data from your own games.
 
 .. toctree::
    :maxdepth: 1

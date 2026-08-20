@@ -2,12 +2,15 @@
 OpenGameData APIs
 #################
 
-.. include:: _apis.md
-   :parser: myst_parser.sphinx_
+This unit covers the various API services built on OpenGameData.
 
 .. toctree::
    :maxdepth: 1
    :caption: OGD APIs
 
-   introduction/index.rst
-   appendix/index.rst
+.. include:: installation.md
+   :parser: myst_parser.sphinx_
+   
+.. include:: appendix.md
+   :parser: myst_parser.sphinx_
+   

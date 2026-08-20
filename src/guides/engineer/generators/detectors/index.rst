@@ -2,5 +2,5 @@
 Event Detectors
 ***************
 
-.. include:: _detectors.md
-   :parser: myst_parser.sphinx_
+.. admonition::STUB
+   This page is on the to-do list.

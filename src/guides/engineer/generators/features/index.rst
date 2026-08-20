@@ -2,8 +2,8 @@
 Feature Extractors
 ******************
 
-.. include:: _features.md
-   :parser: myst_parser.sphinx_
+.. admonition::STUB
+   This page is on the to-do list.
 
 .. include:: add_feature.md
    :parser: myst_parser.sphinx_

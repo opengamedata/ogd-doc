@@ -10,5 +10,4 @@ This unit covers the various features and overall architecture of the data pipel
    :caption: OGD Architecture
 
    overview/index.rst
-   core/index.rst
    modeling/index.rst

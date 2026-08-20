@@ -2,8 +2,7 @@
 Architecture Overview
 *********************
 
-.. include:: ./_overview.md
-   :parser: myst_parser.sphinx_
+This chapter covers a high-level architectural view of the OpenGameData infrastructure, including the various tools provided by the OpenGameData community.
 
 .. include:: ./storage.md
    :parser: myst_parser.sphinx_

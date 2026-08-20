@@ -1,9 +1,9 @@
-##############################
-OpenGameData Core Architecture
-##############################
+#########################
+OpenGameData Core Package
+#########################
 
-.. include:: _core_architecture.md
-   :parser: myst_parser.sphinx_
+OpenGameData provides a Python package called ``opengamedata-core``(or ``ogd-core`` for short), which implements the OpenGameData Core pipeline.
+This unit covers the various features and overall architecture of the data pipeline and ``opengamedata-core`` package.
 
 .. toctree::
    :maxdepth: 1

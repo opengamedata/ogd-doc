@@ -2,8 +2,7 @@
 Documenting OpenGameData
 ########################
 
-.. include:: _meta_documentation.md
-   :parser: myst_parser.sphinx_
+This unit covers the general coding conventions of OpenGameData, as well as meta-documentation about contributing to and building this documentation site.
 
 .. toctree::
    :maxdepth: 1

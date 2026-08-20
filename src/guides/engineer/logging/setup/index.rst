@@ -2,7 +2,7 @@
 Event Logging Setup
 *******************
 
-.. include:: _logging_setup.md
+.. include:: process.md
    :parser: myst_parser.sphinx_
 
 .. include:: logger_and_clients.md

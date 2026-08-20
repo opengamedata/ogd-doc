@@ -2,5 +2,5 @@
 Event Schemas
 *************
 
-.. include:: event_schema.md
+.. include:: schema_structure.md
    :parser: myst_parser.sphinx_

@@ -5,7 +5,7 @@ Data Types and Logging
 This unit introduces the basics of game telemetry events, as well as how to work with this event data, which is fundamental to the OpenGameData infrastructure.
 It also introduces the terminology around "features" of gameplay, which are derived from the event data through aggregation.
 
-Chapter 1 describes the `Event` data type used by the various OpenGameData tools and libraries, and should give you a full understanding of what events *are*, within OpenGameData.
+Chapter 1 describes the ``Event`` data type used by the various OpenGameData tools and libraries, and should give you a full understanding of what events *are*, within OpenGameData.
 Further, it will help you understand how to interpret and work with event data from a game.
 Chapters 2 and 3 describe the process of adding event logging to an existing game.
 

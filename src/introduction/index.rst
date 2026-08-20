@@ -9,9 +9,6 @@ The :doc:`first chapter <welcome/index.rst>` presents a summary of the project a
 The second chapter covers :doc:`getting started <getting_started/index.rst>` in OpenGameData.
 It is intended to help you determine which of the many use-cases supported by the OpenGameData tools apply to you, and by extension, which parts of the documentation you should read.
 
-.. include:: _introduction.md
-   :parser: myst_parser.sphinx_
-
 .. toctree::
    :maxdepth: 1
 

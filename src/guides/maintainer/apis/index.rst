@@ -6,3 +6,4 @@ OpenGameData API Development
    :maxdepth: 1
    :caption: OpenGameData APIs
 
+   endpoint_naming/index.rst

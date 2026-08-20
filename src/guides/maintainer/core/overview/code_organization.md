@@ -1,6 +1,6 @@
 ## OpenGameData Code Organization
 
-<!-- TODO : Move to core/code_organization.md -->
+<!-- TODO : Merge with processing.md, I think a lot of this is redundant. -->
 
 **This document gives a general overview of the various pieces of code in the opengamedata project.**  
 

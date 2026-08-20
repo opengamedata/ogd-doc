@@ -4,6 +4,9 @@ Architecture Overview
 
 This chapter covers a high-level architectural view of the OpenGameData core pipeline.
 
+.. include:: ./code_organization.md
+   :parser: myst_parser.sphinx_
+
 .. include:: ./processing.md
    :parser: myst_parser.sphinx_
 

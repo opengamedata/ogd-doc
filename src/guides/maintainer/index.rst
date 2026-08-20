@@ -9,5 +9,5 @@ OpenGameData Maintainer Guide
    core/index.rst
    common/index.rst
    apis/index.rst
-   standards/index.rst
+   conventions/index.rst
    docs/index.rst

@@ -2,8 +2,7 @@
 Appendices
 ##########
 
-.. include:: _appendix.md
-   :parser: myst_parser.sphinx_
+These appendices include the official OGD Event Standard, a guide for contributing to OpenGameData, and a general glossary of terms.
 
 .. toctree::
    :maxdepth: 1

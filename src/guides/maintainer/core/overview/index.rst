@@ -2,7 +2,7 @@
 Architecture Overview
 *********************
 
-This chapter covers a high-level architectural view of the OpenGameData infrastructure, including the various tools provided by the OpenGameData community.
+This chapter covers a high-level architectural view of the OpenGameData core pipeline.
 
 .. include:: ./processing.md
    :parser: myst_parser.sphinx_

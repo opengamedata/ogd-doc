@@ -1,4 +1,4 @@
-## Configuring OpenGameData
+## Example Configuration
 
 An example configuration file (based on the config template):
 

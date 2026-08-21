@@ -1,13 +1,11 @@
-###################
-Data Analysis Tools
-###################
+#################
+Game Replay Tools
+#################
 
-.. include:: _analysis_tools.md
-   :parser: myst_parser.sphinx_
+This unit covers the supporting tools for replay analysis with OpenGameData datasets.
 
 .. toctree::
    :maxdepth: 2
    :caption: Data Analysis Tools
 
-   overview/index.rst
    autocoder/index.rst

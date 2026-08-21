@@ -49,9 +49,11 @@ To **apply** the changes **Floppy Disk icon** needs to be pressed.
 A new auxiliary column is added, `filtered_in`. Therefore, we can exclude rows with certain values for `event_name` column setting `filtered_in` = False. 
 
 ### Pie charts
+
 **Labeling progress pie**: how many segments are not labels, and how many segments are excluded. (if not segmented)
 
 **Labels count pie**: how many segments are inside each class (also available at the top as text).
 
 ## Downloading Dataset
+
 If you ever want to "export" the dataset you have been working on, click the **Download** button.

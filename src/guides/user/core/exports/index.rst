@@ -2,5 +2,5 @@
 Exporting Data with ``opengamedata-core``
 *****************************************
 
-.. include:: _exports.md
+.. include:: exports.md
    :parser: myst_parser.sphinx_

@@ -77,65 +77,68 @@ As mentioned, we have a few special cases that use special formats outside of **
 ### Documentation Organization
 
 Now that we've covered the languages used to write the documentation, we can discuss the organization of the documentation implementation.
-From a high-level point of view, the documentation is made up of several *Units* (listed in the [overview](../../00_intro/welcome.md)).
-Each unit is, in turn, made up of several *Chapters*.
+From a high-level point of view, the documentation is organized in a hierarchy of *Guide* -> *Unit* -> *Chapter*.
+
+Each *guide* contains documentation intended for a particular type of stakeholder within OpenGameData's software ecosystem. *Guides* are divided into *Units* that cover a significant segment of the documentation, and each *Unit* is, in turn, made up of several *Chapters*.
+
+#### Guides
+
+We currently provide guides for four stakeholders:
+
+1. End Users, often researchers or data analysts, who use OGD tools and data but do not necessarily directly work with software code.
+2. Game Producers, who have games that utilize OGD tools for data collection, and are responsible for any changes to their games (even if they do not directly modify game code themselves).
+3. Game/Data Engineers, who directly write code in either a game or a new code module that works with existing OGD software frameworks, but do not directly work on the source code of OGD software itself.
+4. Maintainers, who work directly on OGD software development.
+
+Each guide should have a single `index.rst` that starts with a header, includes a few sentences or short paragraph introducing the guide, but is principally made up of a table of contents that includes the `index.rst` from each unit in the guide. Otherwise, there is no significant "implementation" of a guide - it is predominantly just an organizing structure.
+
+In addition to the *guides*, there are two top-level structures: the "introduction," which could be seen as a cross-cutting guide to the docs themselves, and an "appendices" folder. These contain the same general structure as the proper "*guides*," even if they don't quite fit the semantic meaning of the term.
 
 #### Units
 
-The documentation source contains one folder for each unit, containing the section chapters, as well as a unit index.
-The unit index is always named `index.rst` and lists each chapter, acting as a table of contents for the unit.
+A *unit* is meant to divide the content of a *guide* into reasonably-sized parts for ease of navigation. There is no hard-and-fast rule for the size of a *unit*; typically we base units on significant components of the work/tools used by the stakeholders for whom the guide is written.
+
+For example, the maintainer *guide* has *units* for each major repository (or major collection of smaller repositories) in the OGD ecosystem. On the other hand, the engineer *guide* has *units* for each broad framework within which external engineering might take place, where each framework might involve multiple components that have their own units in the maintainer *guide*. Concretely, the logging *unit* of the engineer *guide* covers information about the client telemetry libraries, the logging API, and some information about data storage, each of which fall under separate units within the maintainer *guide*.
+
+Structurally, there should be one folder for each *unit*, named according to the unit title.
+The unit index is always named `index.rst` and contains a few sentences or brief paragraph of introduction, similar to the `index.rst` of a unit.
+It then lists each chapter, providing a table of contents for the unit.
 There is a [unit index template](../../util/templates/unit_index.rst) available.
-
-The unit folder should also include a markdown file named `_<unit_name>.md`, which contains a brief overview of the unit contents.
-In particular, it should contain a single second-level header called "Overview" with one or more paragraphs summarizing the contents of the unit.
-This will be the first item included in the `index.rst` and serves a dual purpose:
-
-1. Provides a uniform style of introduction to each unit.
-2. Acts as an easily-identifiable "name" for the unit within the source directory, allowing us to leave unit names numeric, which should reduce the number of truly broken links whenever we add, rename, merge, or otherwise reorganize units.
-
-There is a [unit overview template](../../util/templates/unit_name.rst) available.
 
 #### Chapters
 
-Chapters are implemented with a similar structure to units. However, since they contain true content, they are made up of an `index.rst` document merging multiple **Markdown** shards.
+Chapters contain true content, so they are made up of an `index.rst` document merging multiple **Markdown** shards.
 
-The pieces making up the chapter will be placed in a subfolder, with a numeric name like `chapter_01/`.
+The pieces making up the chapter should be placed in a subfolder, with a name based on the topic of the chapter.
 The "assembly" **reStructuredText** file is then named `index.rst`, and uses the `.. mdinclude` directive to assemble the individual **Markdown** shards, shown in the [**reStructuredText** chapter index template](../../util/templates/chapter_index.rst).
 The **Markdown** shards, in turn, will each begin with level-2 headers, and include only their section of the content.
 This is demonstrated in the [**Markdown** shard template](../../util/templates/chapter_shard.rst).
-The first shard should be named beginning with an underscore, followed by the chapter name (e.g. `_chapter_name.md`), similar to the convention for units.
 A chapter may have a single shard; it is not necessary to break the content down further for short chapters.
 
 #### Folder Structure
 
 Taking all the information given above, the structure of the documentation source has a structure similar to that demonstrated below:
 
-- unit_01/
+- unit_a/
     - chapter_1/
-        - _ch1_name.md
         - index.rst
         - ch1_shard_1.md
         - ch1_shard_2.md
     - chapter_2/
-        - _ch2_name.md
         - index.rst
         - ch2_shard_1.md
         - ch2_shard_2.md
         - ch2_shard_3.md
     - . . .
-    - _unit_a.md
     - index.rst
-- unit_02/
+- unit_b/
     - chapter_1/
-        - _ch1_name.md
         - index.rst
         - ch1_shard_1.md
     - chapter_2/
-        - _ch2_name.md
         - index.rst
         - ch2_shard_1.md
         - ch2_shard_2.md
     - . . .
-    - _unit_b.md
     - index.rst
 - . . .

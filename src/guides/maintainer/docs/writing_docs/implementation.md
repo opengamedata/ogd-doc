@@ -110,9 +110,9 @@ There is a [unit index template](../../util/templates/unit_index.rst) available.
 Chapters contain true content, so they are made up of an `index.rst` document merging multiple **Markdown** shards.
 
 The pieces making up the chapter should be placed in a subfolder, with a name based on the topic of the chapter.
-The "assembly" **reStructuredText** file is then named `index.rst`, and uses the `.. mdinclude` directive to assemble the individual **Markdown** shards, shown in the [**reStructuredText** chapter index template](../../util/templates/chapter_index.rst).
+The "assembly" **reStructuredText** file is then named `index.rst`, and uses the `.. mdinclude` directive to assemble the individual **Markdown** shards, shown in the [**reStructuredText** chapter index template](../../../../util/templates/chapter_index.rst).
 The **Markdown** shards, in turn, will each begin with level-2 headers, and include only their section of the content.
-This is demonstrated in the [**Markdown** shard template](../../util/templates/chapter_shard.rst).
+This is demonstrated in the [**Markdown** shard template](../../../../util/templates/chapter_shard.rst).
 A chapter may have a single shard; it is not necessary to break the content down further for short chapters.
 
 #### Folder Structure

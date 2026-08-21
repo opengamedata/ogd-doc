@@ -8,4 +8,4 @@ This unit introduces the basics of game telemetry events, and how to prepare you
    :maxdepth: 1
    :caption: OpenGameData Hosting
 
-   event_identification/index.rst
+   event_definitions/index.rst

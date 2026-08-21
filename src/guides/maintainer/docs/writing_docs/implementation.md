@@ -37,7 +37,7 @@ on the most common syntax across **Markdown** and **Markdown**-like dialects.
 Below, we include our own quick reference, adapted from the quick reference linked above, for the elements we most commonly use. The "Our Use" column indicates our conventions for when/how to use the various bits of syntax to create a visual language within the documentation. Most uses are obvious, but some are scoped to specific uses:
 
 | Markdown                    | Syntax                             | Our Use                        |
-| ---                         | ---                                | ---                            |
+| --------------------------- | ---------------------------------- | ------------------------------ |
 | Heading                     | \# H1                              | Doc Headers                    |
 |                             | \#\# H2                            | Section Headers                |
 |                             | \#\#\# H3                          | Subsection Headers             |

@@ -2,11 +2,10 @@
 Logging to OpenGameData
 #######################
 
-.. include:: _logging.md
-   :parser: myst_parser.sphinx_
+This unit introduces the basics of game telemetry events, and how to prepare your project to log telemetry with OpenGameData.
 
 .. toctree::
    :maxdepth: 1
    :caption: OpenGameData Hosting
 
-   event_schema/index.rst
+   event_identification/index.rst

@@ -1,4 +1,11 @@
-### Endpoints
+## Base Location
+
+The base URL for the File API is the following:  
+`https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/app.wsgi`
+
+All API requests you make will be relative to this base URL.
+
+## Endpoints
 
 The File API provides the following endpoints, which you can use to access specific details about available datasets, as well as the games behind those datasets.
 Broadly speaking, there is a 3-level hierarchy for retrieving this information.
@@ -11,7 +18,7 @@ Broadly speaking, there is a 3-level hierarchy for retrieving this information.
 There are also a few "legacy" endpoints used by older versions of the website.
 These are considered deprecated, and will be removed in a future version of the API.
 
-#### Game-Level Endpoints
+### Game-Level Endpoints
 
 * `/games`
 
@@ -87,7 +94,7 @@ These are considered deprecated, and will be removed in a future version of the 
   ```
 
 
-#### Dataset-Level Endpoints
+### Dataset-Level Endpoints
 
 * `/games/<game_id>/datasets`
 
@@ -165,7 +172,7 @@ These are considered deprecated, and will be removed in a future version of the 
   curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets/2023/01/manifest
   ```
 
-#### File-Level Endpoints
+### File-Level Endpoints
 
 * `/games/<game_id>/datasets/<month>/<year>/<file_type>`
 
@@ -182,7 +189,7 @@ These are considered deprecated, and will be removed in a future version of the 
   curl https://ogd-services.fielddaylab.wisc.edu/apis/files/latest/games/AQUALAB/datasets/2023/01/player
   ```
 
-#### Legacy Endpoints
+### Legacy Endpoints
 
 Endpoints used by the OpenGameData website, which use an outdated convention.
 We intend to deprecate these in the near future.

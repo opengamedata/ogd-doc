@@ -1,4 +1,6 @@
-### Accessing APIs With Your Browser
+## Accessing APIs With Your Browser
+
+<!-- TODO : this is sort of intended to be used by multiple pages, once per API. I think. So we should move to someplace like the src/util, where we go for multi-use content. But we can wait to sort that out when we actually work on documenting more than one API here. -->
 
 While the output isn't the prettiest, you can easily use your browser to request data from most of our API endpoints.
 In particular, you can use any endpoint that supports the "GET" request method.

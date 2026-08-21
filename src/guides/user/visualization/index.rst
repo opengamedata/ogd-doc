@@ -2,9 +2,10 @@
 Data Visualization Tools
 ########################
 
-.. include:: _visualization.md
-   :parser: myst_parser.sphinx_
+This unit covers the supporting tools for visualizing data contained in OpenGameData datasets.
 
 .. toctree::
    :maxdepth: 2
    :caption: Data Visualization
+
+   dashboard/index.rst

@@ -1,4 +1,4 @@
-## Install OpenGameData
+## Install OpenGameData Core
 
 Once you have a valid Python installation on your system, you are ready to get **OpenGameData** itself installed.
 Specifically, you'll be installing `opengamedata-core`, the tool that contains all the core data post-processing logic for generating post-hoc events and extracting feature data from a series of events.

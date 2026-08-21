@@ -103,7 +103,7 @@ For example, the maintainer *guide* has *units* for each major repository (or ma
 Structurally, there should be one folder for each *unit*, named according to the unit title.
 The unit index is always named `index.rst` and contains a few sentences or brief paragraph of introduction, similar to the `index.rst` of a unit.
 It then lists each chapter, providing a table of contents for the unit.
-There is a [unit index template](../../util/templates/unit_index.rst) available.
+There is a [unit index template](../../../../util/templates/unit_index.rst) available.
 
 #### Chapters
 

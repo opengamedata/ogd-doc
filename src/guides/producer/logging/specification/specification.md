@@ -1,27 +1,3 @@
-## Event Identification
-
-The first step in event design is to identify the individual types of events that occur within gameplay.
-[Owen and Baker](https://link-springer-com.ezproxy.library.wisc.edu/article/10.1007/s10758-018-9393-9) identify three main categories of event: **Player Actions**, **System Feedback**, and **Progression**.
-This is a useful typology to reference when identifying in-game events.
-
-In this step of the event design process, a gameplay session should be scheduled, with a game engineer and a data scientist present.
-One attendee should play through as much of the game as is necessary to interact with each unique game mechanic or system behavior, while all other attendees observe the gameplay.
-When a new type of interaction between the player and game is observed, it should be named and recorded.
-One attendee should act as notetaker, recording these names and a very brief description of each event type.
-Frequent pauses may be required as attendees discuss the game mechanics and the events they observe.
-
-The attendees should look for events within each category of the Owen and Baker typology.
-A brief summary of each category is given below:
-
-* **Player Actions** : events where the player directly performs an action within the game, such as clicking or dragging a UI element, moving within the game world, etc.
-  **Player Actions** should generally be given names in a `verb_noun` format, such as `start_game` or `drag_item`, i.e. using an "active voice."
-* **System Feedback** : events where the game system provides feedback indicating the results of **Player Actions**.
-  These might include displaying a popup window, playing a dialog file, or updating a scoreboard.
-  **System Feedback** events should be named with a `noun_verb` format, such as `score_updated` or `dialog_bubble_displayed`, i.e. using a "passive voice."
-* **Progression** : these are events indicating a concrete progression of the player within the system of the game.
-  These might include completing a puzzle, quest, or level, or completing an achievement.
-  We do not have a particular naming convention for **Progression** events; either a `verb_noun` or `noun_verb` format is reasonable, so long as they are used consistently.
-
 ## Event Specification
 
 Once the distinct types of event in the game have been identified and briefly described, the specific details of the data for each event type should be specified.
@@ -129,39 +105,12 @@ Many different events will involve operations on the same set of in-game objects
 The OpenGameData software uses a particular specification format to auto-generate documentation of a game's events.
 You can read more about it in the [game schemas](../04_core-architecture/overview/game_schemas.md) page.
 
-## Event Implementation
-
-Once the events for a game have been specified, they should be implemented into the game via a logging package.
-This step of Event Design should be considered a game engineering task; that is, implementation should generally be performed by a game engineer, rather than a data scientist.
-
-As a game engineering task, it is helpful to consider aspects like efficiency and robustness at this stage of event design.
-In particular, it is important to ensure event logging does not impact the user experience while playing the game.
-Comprehensive error handling should be used to ensure logging system bugs or network issues do not crash or impact the game.
-Similarly, if it is determined that the set of events and sets of context-data keys will require too much processing power or bandwidth for a given game, revisions to the _Event Specification_ may be required.
-
-Other steps may be taken to improve the efficiency of logging, such as batching events to be sent as a single request to the logging server.
-Certain elements of the OGD Event Schema are constant within a given gameplay session (such as `UserID`, `SessionID`, `AppVersion`, and `LogVersion`), and a logging implementation could avoid sending these with every single event individually, leaving the logging server to attach these IDs and versions to the individual events.
-
-OpenGameData provides logging packages for Unity and JavaScript, as well as a PHP-based event "receiver" for the logging server.
-For information on using these in a logging implementation, see the appropriate link(s) below.
-
-* For Unity game projects : [opengamedata-unity documentation](https://github.com/opengamedata/opengamedata-unity/blob/main/README.md)
-* For JavaScript-based game projects : [opengamedata-js-log documentation](https://github.com/opengamedata/opengamedata-js-log/blob/main/README.md)
-* For event logging server : [opengamedata-logger documentation](https://github.com/opengamedata/opengamedata-logger/blob/master/README.md)
-
-## Iteration
-
-In general, event design is an iterative process.
-After identifying, specifying, and implementing a set of events in a game, preliminary data should be collected and analyzed.
-If there are any shortcomings in the data, such as missing events or events lacking sufficient context, a new iteration should be performed.
-This consists of _identifying_ shortcomings of the current event set (or schema), _specifying_ changes to the schema to address the shortcomings, and _implementing_ the changes into the game's logging code.
-
-## Best Practices & Naming Conventions
+### Best Practices & Naming Conventions
 
 Below, we list some recommended practices and naming conventions.
 These are, in general, arbitrary but reasonable, and are recommended to create consistency across game projects.
 
-### Event Names
+#### Event Names
 
 * Formatting:  
   We use a `snake_case` format for event names.
@@ -171,7 +120,7 @@ These are, in general, arbitrary but reasonable, and are recommended to create c
     * **Player Actions** should have an "active" `verb_object` form, with a present-tense verb, such as `click_button`.
     * **System Feedback** events should have a "passive" `object_verb` form, with a past-tense verb, such as `dialog_displayed`.
 
-### Context Data Elements
+#### Context Data Elements
 
 * Formatting:  
   We use a `snake_case` format for all keys in the context elements (`EventData`, `GameState`, and `UserData`).
